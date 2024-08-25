@@ -1,0 +1,374 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>Get started - PiNNAcLe</title>
+
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/notebook.css">
+  <link rel="stylesheet" href="../../css/pygments.css">
+  <link rel="icon" href="data:,">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+  <script>
+    var base_url = "../..";
+    $(document).ready(function(){
+          $('table').wrap('<div class="table-wrapper"></div>');
+    });
+  </script>
+
+  <script src="../../js/mike.js"></script>
+
+  
+    <script src="../../js/mathjax.js"></script>
+  
+    <script src="../../search/main.js"></script>
+  
+
+</head>
+
+<body>
+  <header class="header">
+    <ul>
+      <li id="logo">
+        <a href="../..">PiNN<span>AcLe</span></a>
+      </li>
+      
+      
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+      
+      
+  
+  <li class="active tab" >
+    <a href="./">
+      Tutorial
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+      
+      <li class="tools">
+        
+          <a id="nav-toggle" class="tool" onclick="nav_toggle()">
+        
+          <svg><use xlink:href="../../svg/sprite.svg#menu-2"></use></svg>
+        </a>
+        <script>
+           function nav_toggle() {
+               var bar = document.getElementById("tab-bar");
+               if (bar.style.display === "none") {
+                   bar.style.display = "block";
+               } else {
+                   bar.style.display = "none";
+               }
+           }
+          function nav_reset() {
+              var bar = document.getElementById("tab-bar");
+              if (window.innerWidth>950){
+                  bar.style.display = "block";
+              } else {
+                  bar.style.display = "none";
+              }
+          }
+          window.onresize = nav_reset;
+        </script>
+        
+        
+        <a class="tool" href="https://github.com/teoroo-cmc/pinnacle/">
+          <svg><use xlink:href="../../svg/sprite.svg#brand-github"></use></svg>
+          <span>teoroo-cmc/pinnacle</span>
+        </a>
+        
+      </li>
+    </ul>
+  </header>
+
+
+  <div id="main">
+    <div id="tab-bar">
+      <ul>
+      
+       
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li class="active tab" >
+    <a href="./">
+      Tutorial
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+                 
+                   
+    <li class="active">
+      <a href="./" class="">
+        Get started
+      </a>
+    </li>
+
+                 
+                   
+    <li >
+      <a href="../workflow/" class="">
+        Workflow
+      </a>
+    </li>
+
+                 
+                   
+    <li >
+      <a href="../configure/" class="">
+        Configure
+      </a>
+    </li>
+
+                 
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+      </ul>
+    </div>
+
+    <div id="content">
+      <h1 id="get-started">Get Started</h1>
+<p>In this demo, we prepare a dataset with the xTB for different water/ethanol
+mixtures, and run an activated learning workflow starting from the initial
+dataset.</p>
+<h2 id="installation">Installation</h2>
+<p>PiNNAcLe depends on nextflow, it can be installed following the official
+<a href="https://www.nextflow.io/docs/latest/getstarted.html#installation">documentation</a>. By default, the workflows will be run through
+singularity containers, and you need to install that as well, see their
+<a href="https://docs.sylabs.io/guides/main/user-guide/quick_start.html#quick-installation-steps">documentation</a>.</p>
+<p>Singularity is the recommended way of running the workflows, it is intended for
+running and sharing software, and avoids complications with compilation and
+environment setup. But if you prefer otherwise, you can easily configure
+workflow to run with a different profile, which controls how and on what
+resource each process is run, read more in the <a href="../../profiles/overview">Profiles</a> section.</p>
+<h2 id="get-the-workflow">Get the workflow</h2>
+<p>The PiNNAcLe workflow can be downloaded as a <a href="https://copier.readthedocs.io/en/stable/#installation">copier</a> template. The template
+simply downloads the PiNNAcLe modules and sets up a project directory ready to
+be extended. If you do not have copier installed, you can simply clone the repo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>copier<span class="w"> </span>gh:teoroo-cmc/pinnacle<span class="w"> </span>demo_proj
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># or git clone https://github.com/Teoroo-CMC/PiNNAcLe.git demo_proj</span>
+</code></pre></div>
+<p>You may also run the workflow directly as a shared pipeline, as demonstrated
+<a href="https://www.nextflow.io/docs/latest/sharing.html#running-a-pipeline">here</a>, we chose to have the modules explicitly in the project folder
+so that you can see how they can be adapted to your need in later sections of
+the tutorial.</p>
+<h2 id="running-the-workflow">Running the workflow</h2>
+<p>To run the workflow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span><span class="c1"># add -profile your_profile if necessary</span>
+</code></pre></div>
+<p>You might need to wait a while for the singularity images to be pulled,
+afterward you should see something like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Launching `main.nf` [friendly_carlsson] DSL2 - revision: e28d0f3d5d
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>executor &gt;  local (18)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[0d/2b1c2a] process &gt; we_demo:mol2box (2)        [100%] 9 of 9 ✔
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>[3b/ebc632] process &gt; we_demo:md:aseMD (3)       [  0%] 0 of 6
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>[-        ] process &gt; we_demo:mkds               -
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>[-        ] process &gt; we_demo:mkgeo              -
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>[-        ] process &gt; we_demo:acle:loop:train    -
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>[-        ] process &gt; we_demo:acle:loop:md       -
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>[-        ] process &gt; we_demo:acle:loop:convert  -
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>[-        ] process &gt; we_demo:acle:loop:sp:aseSP -
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>[-        ] process &gt; we_demo:acle:loop:merge    -
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>[-        ] process &gt; we_demo:acle:loop:check    -
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>[-        ] process &gt; we_demo:acle:loop:dsmix    -
+</code></pre></div>
+<p>What listed above as "processes" are the basic element of nextflow workflows. A
+workflow defines how different processes are linked, and the configuration
+controls how they are launched in practice (e.g., environment setup,
+parallelization, resource allocation, etc.)</p>
+<p>You might notice that the processes are tracked by a 2-level hex code such as
+<code>0d/2d1c2a</code>. This is how nextflow arrange the output of processes, each process
+will be launched in a folder named after this unique code. The code will be
+useful for restarting the workflow and for debugging the processes, the folder
+structure is illustrated below.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>demo_proj
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├──<span class="w"> </span>main.nf<span class="w"> </span><span class="c1"># main entry point for the workflows</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├──<span class="w"> </span>nextflow<span class="w"> </span><span class="c1"># nextflow recipes and modules</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│<span class="w">   </span>├──<span class="w"> </span>acle.nf
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│<span class="w">   </span>├──<span class="w"> </span>we_demo.nf
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│<span class="w">   </span>└──<span class="w"> </span>module
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│<span class="w">       </span>├──<span class="w"> </span>pinn.nf
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│<span class="w">       </span>├──<span class="w"> </span>tips.nf
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>│<span class="w">       </span>└──<span class="w"> </span>...
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>├──<span class="w"> </span>we_demo<span class="w"> </span><span class="c1"># output folders are linke to work directory</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>│<span class="w">   </span>├──<span class="w"> </span>init
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>geo
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>e32-1.xyz<span class="w"> </span>-&gt;<span class="w"> </span>/xx/demo_proj/work/c6/322d1c1...
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>│<span class="w">   </span>└──<span class="w"> </span>...
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>└──<span class="w"> </span>work<span class="w"> </span><span class="c1"># actual execution directory of the workflow</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span>├──<span class="w"> </span>c6
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>322d1c1f55ec381f34c361bc4e743f
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>e32-1.xyz
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>.commnad.sh
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>.commnad.run
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>.commnad.out
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>...
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span>└──<span class="w"> </span>...
+</code></pre></div>
+<h2 id="useful-commands">Useful commands</h2>
+<p>Before going further, below are some nextflow commands that you might find
+useful. For a more comprehensive description, check the nextflow <a href="https://www.nextflow.io/docs/latest/cli.html">CLI
+reference</a>.</p>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Checking</label><div class="tabbed-content">
+<p>Nextflow keeps track of what you have run and how your run them
+Each run of the workflow is attached to a "run name", with which you can resume, log,
+and clean up the jobs, try <code>nextflow log tiny_brattain</code> (replace with your own run) to
+get a list of all jobs in a run.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ nextflow log 
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>---
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>TIMESTAMP              DURATION        RUN NAME                    STATUS  REVISION ID     SESSION ID                              COMMAND
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2022-04-26 22:52:18    1h 40m 53s      tiny_brattain               OK      e7132a82d7      bf527311-a5d9-4f7b-b615-d50ff99e6ec5    nextflow run main.nf
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Resuming</label><div class="tabbed-content">
+<p>Nextflow caches the jobs according to their inputs, if your run is
+interrupted, you can resume from where your stopped with the <code>-resume</code>. You
+can also specify a previous sessuib to resume from:
+<code>nextflow run main.nf -resume SESSION_ID</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ nextflow run main.nf -resume
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>---
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Launching `main.nf` [disturbed_crick] - revision: 3439ecc683
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>executor &gt; local (6)
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>[85/e10f9e] process &gt; train (1) [50%] 3 of 6, cached: 3
+</code></pre></div>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Cleaning</label><div class="tabbed-content">
+<p>Keeping a complete record of things has a cost, the script and 
+intermediate results for past runs might accumulate to a large number of file. 
+It is recommended to clean up your unneeded runs regularly. If you are 
+restricted by disk, you should also consider setting the <a href="https://www.nextflow.io/docs/latest/process.html#scratch">scratch</a>
+directive.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ nextflow clean -f disturbed_crick
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>---
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Removed /home/user/proj/work/3f/f350726963c2372d1673b900553d6f
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Removed /home/user/proj/work/83/60f47f79880256257fc53a19b6ffac
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Removed /home/user/proj/work/5f/bd7e2a391cb53a4e20057c4641e408
+</code></pre></div>
+</div>
+</div>
+<h2 id="what-next">What next?</h2>
+<ul>
+<li><a href="../workflow">Workflow</a>: more on how to run workflows;</li>
+<li><a href="../configure">Configure</a>: how the processes are executed.</li>
+</ul>
+    </div>
+
+  </div>
+
+  <div class="page">
+    <div class="page-prev">
+      
+      <a href="../.." title="Home"><span>«</span> Previous</a>
+      
+    </div>
+    <div class="page-next">
+      
+      <a href="../workflow/" title="Workflow" />Next <span>»</span></a>
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    Built with <a href="https://www.mkdocs.org">mkdocs</a> and the <a href="https://github.com/yqshao/mkdocs-flux-theme">flux</a> theme.
+  </div>
+</body>
+</html>

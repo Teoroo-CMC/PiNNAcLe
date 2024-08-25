@@ -1,0 +1,361 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>Workflow - PiNNAcLe</title>
+
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/notebook.css">
+  <link rel="stylesheet" href="../../css/pygments.css">
+  <link rel="icon" href="data:,">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+  <script>
+    var base_url = "../..";
+    $(document).ready(function(){
+          $('table').wrap('<div class="table-wrapper"></div>');
+    });
+  </script>
+
+  <script src="../../js/mike.js"></script>
+
+  
+    <script src="../../js/mathjax.js"></script>
+  
+    <script src="../../search/main.js"></script>
+  
+
+</head>
+
+<body>
+  <header class="header">
+    <ul>
+      <li id="logo">
+        <a href="../..">PiNN<span>AcLe</span></a>
+      </li>
+      
+      
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+      
+      
+  
+  <li class="active tab" >
+    <a href="../get_started/">
+      Tutorial
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+      
+      <li class="tools">
+        
+          <a id="nav-toggle" class="tool" onclick="nav_toggle()">
+        
+          <svg><use xlink:href="../../svg/sprite.svg#menu-2"></use></svg>
+        </a>
+        <script>
+           function nav_toggle() {
+               var bar = document.getElementById("tab-bar");
+               if (bar.style.display === "none") {
+                   bar.style.display = "block";
+               } else {
+                   bar.style.display = "none";
+               }
+           }
+          function nav_reset() {
+              var bar = document.getElementById("tab-bar");
+              if (window.innerWidth>950){
+                  bar.style.display = "block";
+              } else {
+                  bar.style.display = "none";
+              }
+          }
+          window.onresize = nav_reset;
+        </script>
+        
+        
+        <a class="tool" href="https://github.com/teoroo-cmc/pinnacle/">
+          <svg><use xlink:href="../../svg/sprite.svg#brand-github"></use></svg>
+          <span>teoroo-cmc/pinnacle</span>
+        </a>
+        
+      </li>
+    </ul>
+  </header>
+
+
+  <div id="main">
+    <div id="tab-bar">
+      <ul>
+      
+       
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li class="active tab" >
+    <a href="../get_started/">
+      Tutorial
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+                 
+                   
+    <li >
+      <a href="../get_started/" class="">
+        Get started
+      </a>
+    </li>
+
+                 
+                   
+    <li class="active">
+      <a href="./" class="">
+        Workflow
+      </a>
+    </li>
+
+                 
+                   
+    <li >
+      <a href="../configure/" class="">
+        Configure
+      </a>
+    </li>
+
+                 
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+      </ul>
+    </div>
+
+    <div id="content">
+      <h1 id="understanding-the-workflow">Understanding the workflow</h1>
+<h2 id="parameters">Parameters</h2>
+<p>So far in the tutorial, we have executed the workflow as-is. In nextflow, there
+is a built-in way of defining variables that can be tweaked at runtime, called
+"parameters". See the <code>nextflow/we_demo.nf</code> as an example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">params</span><span class="o">.</span><span class="na">proj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;we_demo&#39;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">params</span><span class="o">.</span><span class="na">init_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;--t 0.10 --log-every 1&#39;</span><span class="w"> </span><span class="c1">// 200 steps each</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">params</span><span class="o">.</span><span class="na">init_seeds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">params</span><span class="o">.</span><span class="na">init_steps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200000</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">params</span><span class="o">.</span><span class="na">init_model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;input/pinn/pinet-hco-adam.yml&#39;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">params</span><span class="o">.</span><span class="na">init_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span>
+</code></pre></div>
+<p>The <code>params.proj</code> parameter determines where the output files will be
+"published" into. To change while running the same workflow, we simply have to
+add the option to <code>nextflow run</code>, i.e. the following command will run the same
+workflow, but use 2 initial seeds (to generate the initial dataset with).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>--proj<span class="o">=</span>trail2<span class="w"> </span>--init_seeds<span class="o">=</span><span class="m">2</span>
+</code></pre></div>
+<h2 id="modules-and-inclusion">Modules and inclusion</h2>
+<p>Thanks to the DSL2 syntax of nextflow, the workflows in PiNNAcLe are reusable
+easily. Below, on see how the workflow parameters can be injected into included
+processes/workflows; the publishing directories of subworkflows is set, and a
+few parameters required by acle are supplied:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">mol2box</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s2">&quot;./module/molutils.nf&quot;</span><span class="w"> </span><span class="n">addParams</span><span class="w"> </span><span class="o">(</span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.proj/init/pack&quot;</span><span class="o">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">md</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s2">&quot;./module/dftb.nf&quot;</span><span class="w"> </span><span class="n">addParams</span><span class="w"> </span><span class="o">(</span><span class="nl">publish:</span><span class="s2">&quot;$params.proj/init/md/&quot;</span><span class="o">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">mkgeo</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s2">&quot;./module/tips.nf&quot;</span><span class="w"> </span><span class="n">addParams</span><span class="w"> </span><span class="o">(</span><span class="nl">publish:</span><span class="s2">&quot;$params.proj/init/ds&quot;</span><span class="o">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">mkds</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s2">&quot;./module/tips.nf&quot;</span><span class="w"> </span><span class="n">addParams</span><span class="w"> </span><span class="o">(</span><span class="nl">publish:</span><span class="s2">&quot;$params.proj/init/geo&quot;</span><span class="o">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">acle</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s2">&quot;./acle.nf&quot;</span><span class="w"> </span><span class="n">addParams</span><span class="w"> </span><span class="o">(</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.proj/acle&quot;</span><span class="o">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nl">geo_size:</span><span class="w"> </span><span class="n">geo_size</span><span class="o">)</span>
+</code></pre></div>
+<h2 id="processes">Processes</h2>
+<p>The processes, such as the ones included above are the building block of
+nextflow scripts. As shown below, they are simply scripts with a few
+input/output "channels". When the workflow runs, the scripts will be executed in
+the work directory, where the <code>$variables</code> will be substituted by whatever
+supplied by the input channels; and the files produced by the output patterns
+will.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">process</span><span class="w"> </span><span class="n">aseSP</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">label</span><span class="w"> </span><span class="s2">&quot;$params.ase_label&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="n">publishDir</span><span class="w"> </span><span class="s2">&quot;$params.publish/$name&quot;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nl">input:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">calc</span><span class="o">,</span><span class="w"> </span><span class="nl">stageAs:</span><span class="w"> </span><span class="s1">&#39;calc.py&#39;</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">geo</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">aux</span><span class="o">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nl">output:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;sp.xyz&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nl">script:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="s2">    #!/usr/bin/env python</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s2">    from ase.io import read, write</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="s2">    from calc import calc</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="s2">    atoms = read(&#39;$geo&#39;)</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="s2">    atoms.calc=calc</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="s2">    calc.calculate(atoms, properties=${params.ase_props})</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="s2">    write(&#39;sp.xyz&#39;, atoms)</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="o">}</span>
+</code></pre></div>
+<p>It should be easy to tweak the workflow behavior via the process scripts. You
+might also want to check the nextflow <a href="https://www.nextflow.io/docs/latest/process.html">documentation</a> to see what is possible.
+In addition, a few implementation patterns are followed:</p>
+<ul>
+<li>processes are labelled by the dependent software and arranged as "modules";</li>
+<li>interchangeable processes in different modules share the same name (e.g. <code>sp</code>,
+  <code>md</code>);<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li>processes input is always one tuple, where the first element is indented as an
+  identifier;<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+</ul>
+<h2 id="workflow-and-recipes">Workflow and recipes</h2>
+<p>IN DSL2, workflows are composed of processes, and can share the same
+<a href="https://www.nextflow.io/docs/latest/dsl2.html#workflow-input">input/output</a> structure to behave like a process. However, the "main"
+workflows to be executed would have to be self-contained, meaning it will not
+receive inputs and will define the "channels" within itself and feed them to
+the sub-workflows, as shown in the following snippet.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">workflow</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="n">ch_inputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Channel</span><span class="o">.</span><span class="na">fromList</span><span class="o">(</span><span class="n">inputs</span><span class="o">)</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">combine</span><span class="o">(</span><span class="n">Channel</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">1</span><span class="o">..</span><span class="na">params</span><span class="o">.</span><span class="na">init_seeds</span><span class="o">))</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">tag</span><span class="o">,</span><span class="w"> </span><span class="n">box</span><span class="o">,</span><span class="w"> </span><span class="n">seed</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;$name-$seed&quot;</span><span class="o">,</span><span class="w"> </span><span class="n">tag</span><span class="o">,</span><span class="w"> </span><span class="n">box</span><span class="o">.</span><span class="na">toFloat</span><span class="o">(),</span><span class="w"> </span><span class="n">seed</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">mol2box</span>
+</code></pre></div>
+<p>Those modules that provide self-contained workflow are called "recipes" in
+PiNNAcLe. The workflow will always be named as <code>entry</code> and exposed as the module
+name in the main workflow, i.e., the following three commands does the same
+thing:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>nextflow/acle.nf
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>nextflow<span class="w"> </span>run<span class="w"> </span>nextflow/acle.nf<span class="w"> </span>-entry<span class="w"> </span>entry
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>-entry<span class="w"> </span>acle
+</code></pre></div>
+<p>I.e., the <code>-entry</code> option chooses which workflow to run within a workflow file,
+and the <code>main.nf</code> serves as a shortcut to call those recipes. Other than that,
+there are no qualitative difference between recipes and normal modules, and both
+can expose reusable sub-workflows, such as the <code>acle</code> workflow in the demo.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>This also applies to workflows that shares a common input/output pattern.
+This allows complex workflows to be composed in a implementation-agnostic
+fashion, for instance, the reference (<code>params.ref</code>) and machine learning
+potential (<code>params.mlp</code>) can be swapped to any compatible module.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>This ensures all outputs are trackable by their identifier in a complex
+workflow. For instance, in the acle workflow, the labelled points are
+identified as <code>gen/geo/idx</code>, the information is used to map them back to the
+sampled trajectory when evaluating the performance of the model.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+
+  </div>
+
+  <div class="page">
+    <div class="page-prev">
+      
+      <a href="../get_started/" title="Get started"><span>«</span> Previous</a>
+      
+    </div>
+    <div class="page-next">
+      
+      <a href="../configure/" title="Configure" />Next <span>»</span></a>
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    Built with <a href="https://www.mkdocs.org">mkdocs</a> and the <a href="https://github.com/yqshao/mkdocs-flux-theme">flux</a> theme.
+  </div>
+</body>
+</html>

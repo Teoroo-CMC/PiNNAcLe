@@ -1,0 +1,793 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>AcLe - PiNNAcLe</title>
+
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/notebook.css">
+  <link rel="stylesheet" href="../../css/pygments.css">
+  <link rel="icon" href="data:,">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+  <script>
+    var base_url = "../..";
+    $(document).ready(function(){
+          $('table').wrap('<div class="table-wrapper"></div>');
+    });
+  </script>
+
+  <script src="../../js/mike.js"></script>
+
+  
+    <script src="../../js/mathjax.js"></script>
+  
+    <script src="../../search/main.js"></script>
+  
+
+</head>
+
+<body>
+  <header class="header">
+    <ul>
+      <li id="logo">
+        <a href="../..">PiNN<span>AcLe</span></a>
+      </li>
+      
+      
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../tutorial/get_started/">
+      Tutorial
+    </a>
+  </li>
+
+      
+      
+  
+  <li class="active tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+      
+      <li class="tools">
+        
+          <a id="nav-toggle" class="tool" onclick="nav_toggle()">
+        
+          <svg><use xlink:href="../../svg/sprite.svg#menu-2"></use></svg>
+        </a>
+        <script>
+           function nav_toggle() {
+               var bar = document.getElementById("tab-bar");
+               if (bar.style.display === "none") {
+                   bar.style.display = "block";
+               } else {
+                   bar.style.display = "none";
+               }
+           }
+          function nav_reset() {
+              var bar = document.getElementById("tab-bar");
+              if (window.innerWidth>950){
+                  bar.style.display = "block";
+              } else {
+                  bar.style.display = "none";
+              }
+          }
+          window.onresize = nav_reset;
+        </script>
+        
+        
+        <a class="tool" href="https://github.com/teoroo-cmc/pinnacle/">
+          <svg><use xlink:href="../../svg/sprite.svg#brand-github"></use></svg>
+          <span>teoroo-cmc/pinnacle</span>
+        </a>
+        
+      </li>
+    </ul>
+  </header>
+
+
+  <div id="main">
+    <div id="tab-bar">
+      <ul>
+      
+       
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../tutorial/get_started/">
+      Tutorial
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li class="active tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+                 
+                   
+    <li >
+      <a href="../../manual/" class="">
+        Overview
+      </a>
+    </li>
+
+                 
+                   
+  <a class="nav-title" > Recipes </a>
+  
+    
+    <li class="active">
+      <a href="./" class="">
+        AcLe
+      </a>
+    </li>
+
+  
+
+                 
+                   
+  <a class="nav-title" > Modules </a>
+  
+    
+    <li >
+      <a href="../../module/tips/" class="">
+        TIPS
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../../module/pinn/" class="">
+        PiNN
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../../module/cp2k/" class="">
+        CP2K
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../../module/ase/" class="">
+        ASE
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../../module/dftb/" class="">
+        DFTB+
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../../module/molutils/" class="">
+        molutils
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../../module/lammps/" class="">
+        LAMMPS
+      </a>
+    </li>
+
+  
+
+                 
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+      </ul>
+    </div>
+
+    <div id="content">
+      <h1 id="activated-learning">Activated Learning</h1>
+<p>The activated learning recipe actively samples a potential energy surface. The
+workflow is controlled by several subworkflows, including the training,
+sampling, and labelling processes. The overall workflow is shown in the
+following diagram:</p>
+<p><img alt="workflow" src="../../tikz/acle.svg" /></p>
+<p>The workflow can be used as either an entrypoint or a subworkflow. Some
+parameters that set up the initial datasets and models are taken by the
+entrypoint only, see below for usage and tables of parameters.</p>
+<h2 id="entrypoint">Entrypoint</h2>
+<details class="code">
+<summary>Convert initial dataset and geometry from a ASE trajectory</summary>
+<p>As a example, consider a trajectory file readable by ASE as input, 
+the <code>tips convert</code> CLI tool can be used get the initial dataset and
+geometries:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># generating my_ds.{yml,tfr} </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>tips<span class="w"> </span>convert<span class="w"> </span>-f<span class="w"> </span>asetraj<span class="w"> </span>data.traj<span class="w"> </span>-of<span class="w"> </span>pinn<span class="w"> </span>my_ds
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># generating the initial geometry</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>tips<span class="w"> </span>convert<span class="w"> </span>-f<span class="w"> </span>asetraj<span class="w"> </span>data.traj<span class="w"> </span>--subsample<span class="w"> </span>uniform<span class="w"> </span>-of<span class="w"> </span>idx.xyz
+</code></pre></div>
+</details>
+<p>To run the workflow as an entrypoint (<strong>single quotes are necessary</strong>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>-entry<span class="w"> </span>acle<span class="w"> </span>--init_ds<span class="w"> </span><span class="s1">&#39;myds.{yml,tfr}&#39;</span><span class="w"> </span>--init_geo<span class="w"> </span><span class="s1">&#39;*.xyz&#39;</span><span class="w"> </span>...
+</code></pre></div>
+<p>It is possible to restart a project from a ceratin generation, while keeping the
+folder structure:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>-entry<span class="w"> </span>acle<span class="w"> </span>--restart_from<span class="w"> </span><span class="m">30</span><span class="w"> </span>--restart_conv<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+<p>When restarted in the above way the <code>init_*</code> parameters will be ignored. This
+method is mainly for small changes of the sampled ensemble, e.g., an <em>ad hook</em>
+change of temperature. In cases where this is not enough, it is advisable to
+rerun the workflow under a different <code>--proj</code>.</p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>init_geo</code></td>
+<td>inital geometries for sampling</td>
+<td><code>input/geo/*.xyz</code></td>
+</tr>
+<tr>
+<td><code>init_model</code></td>
+<td>initial model or model parameters</td>
+<td><code>input/pinn/pinet-adam.yml</code></td>
+</tr>
+<tr>
+<td><code>init_ds</code></td>
+<td>initial dataset</td>
+<td><code>input/ds/init-ds.{yml,tfr}</code></td>
+</tr>
+<tr>
+<td><code>init_time</code></td>
+<td>sampling time scale in ps</td>
+<td><code>1.0</code></td>
+</tr>
+<tr>
+<td><code>init_steps</code></td>
+<td>training steps for initial model</td>
+<td><code>100000</code></td>
+</tr>
+<tr>
+<td><code>restart_from</code></td>
+<td>restart from a given generation</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>restart_conv</code></td>
+<td>restart from a converged model (model will be retrained if <code>false</code>)</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="subworkflow">Subworkflow</h2>
+<h3 id="inputoutput-channels">Input/Output Channels</h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>I/O[idx]</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gen</code></td>
+<td><code>in[0]</code></td>
+<td><code>val</code></td>
+<td>generation of the model</td>
+</tr>
+<tr>
+<td><code>geo</code></td>
+<td><code>in[1]</code></td>
+<td><code>file</code></td>
+<td>initial geometry</td>
+</tr>
+<tr>
+<td><code>ds</code></td>
+<td><code>in[2]</code></td>
+<td><code>file</code></td>
+<td>training dataset</td>
+</tr>
+<tr>
+<td><code>steps</code></td>
+<td><code>in[3]</code></td>
+<td><code>val</code></td>
+<td>training steps</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td><code>in[4]</code></td>
+<td><code>val</code></td>
+<td>sampling timescale</td>
+</tr>
+<tr>
+<td><code>converge</code></td>
+<td><code>in[5]</code></td>
+<td><code>val</code></td>
+<td>whether the input model is deemed converged</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition code">
+<p>The AcLe subworkflow is a recursive workflow, and the input and output
+shares the same data structure.</p>
+</div>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proj</code></td>
+<td>folder for storing results</td>
+<td><code>acle</code></td>
+</tr>
+<tr>
+<td><code>ref</code></td>
+<td>reference calculation module</td>
+<td><code>dftb</code></td>
+</tr>
+<tr>
+<td><code>ref_inp</code></td>
+<td>reference input file</td>
+<td><code>input/dftb/xtb.py</code></td>
+</tr>
+<tr>
+<td><code>mpl</code></td>
+<td>machine learning potential module</td>
+<td><code>pinn</code></td>
+</tr>
+<tr>
+<td><code>train_flags</code></td>
+<td>mlp training flags</td>
+<td><code>--log-every 10000 --ckpt-every 100000 --batch 1 --max-ckpts 1 --shuffle buffter 3000</code></td>
+</tr>
+<tr>
+<td><code>train_init</code></td>
+<td>mlp training flags</td>
+<td><code>--init</code></td>
+</tr>
+<tr>
+<td><code>max_gen</code></td>
+<td>maximal number of generations</td>
+<td><code>40</code></td>
+</tr>
+<tr>
+<td><code>min_time</code></td>
+<td>minimal timescale for sampling</td>
+<td><code>1.0</code></td>
+</tr>
+<tr>
+<td><code>max_time</code></td>
+<td>maximal timescale for sampling</td>
+<td><code>1000.0</code></td>
+</tr>
+<tr>
+<td><code>md_flags</code></td>
+<td>flags for md sampling, see ase module for details</td>
+<td><code>--ensemble nvt --dt 0.5 --log-every 100 --T 340</code></td>
+</tr>
+<tr>
+<td><code>collect_flags</code></td>
+<td>collection flags for the data to label</td>
+<td><code>-f asetraj --subsample uniform --nsample 10 -of idx.xyz -o ds</code></td>
+</tr>
+<tr>
+<td><code>sp_points</code></td>
+<td>number of single points per sampled trajectory</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>old_flag</code></td>
+<td>selection rule for the old dataset</td>
+<td><code>--nsample 2700</code></td>
+</tr>
+<tr>
+<td><code>new_flag</code></td>
+<td>selection rule for the new dataset</td>
+<td><code>--nsample 300</code></td>
+</tr>
+<tr>
+<td><code>sp_points</code></td>
+<td>number of single points for each sampled trajectory</td>
+<td><code>50</code></td>
+</tr>
+<tr>
+<td><code>emaxtol</code></td>
+<td>toleranace for max error error</td>
+<td><code>0.020</code></td>
+</tr>
+<tr>
+<td><code>ermsetol</code></td>
+<td>toleranace for energy RMSE</td>
+<td><code>0.005</code></td>
+</tr>
+<tr>
+<td><code>fmaxtol</code></td>
+<td>toleranace for max force (component) error</td>
+<td><code>0.800</code></td>
+</tr>
+<tr>
+<td><code>frmsetol</code></td>
+<td>toleranace for force (component) RMSE</td>
+<td><code>0.200</code></td>
+</tr>
+<tr>
+<td><code>retrain_step</code></td>
+<td>number of retrain steps per generation</td>
+<td><code>100000</code></td>
+</tr>
+<tr>
+<td><code>acc_fac</code></td>
+<td>factor to acceralate the sampling</td>
+<td><code>2.0</code></td>
+</tr>
+<tr>
+<td><code>brake_fac</code></td>
+<td>factor to slow down the sampling</td>
+<td><code>1.0</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<details>
+<summary>Source Code: nextflow/acle.nf</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#!/usr/bin/env nextflow</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">// The activated learning workflow  ======================================================</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">//</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">// The &#39;--proj&#39; parameter controls the output directory. See the parameters</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">// sections below for other parameters that can be tuned for the workflow.</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">//</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">//                                         written by  Yunqi Shao, first ver.: 2022.Aug.29</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">//                                                 adapted as PiNNAcLe recipe: 2023.Apr.24</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">//========================================================================================</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">nextflow</span><span class="o">.</span><span class="na">enable</span><span class="o">.</span><span class="na">dsl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">nextflow</span><span class="o">.</span><span class="na">preview</span><span class="o">.</span><span class="na">recursion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="kt">def</span><span class="w"> </span><span class="nf">logger</span><span class="w"> </span><span class="o">(</span><span class="n">msg</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="n">logfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;$params.publish/pinnacle.log&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">(!</span><span class="n">logfile</span><span class="o">.</span><span class="na">getParent</span><span class="o">().</span><span class="na">exists</span><span class="o">())</span><span class="w"> </span><span class="o">{</span><span class="n">logfile</span><span class="o">.</span><span class="na">getParent</span><span class="o">().</span><span class="na">mkdirs</span><span class="o">()}</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="n">logfile</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s2">&quot;$msg \n&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="o">}</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="c1">// entrypoint parameters ==================================================================</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="n">params</span><span class="o">.</span><span class="na">publish</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;acle&#39;</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="n">params</span><span class="o">.</span><span class="na">init_geo</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;input/geo/*.xyz&#39;</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="n">params</span><span class="o">.</span><span class="na">init_model</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;input/pinn/pinet-adam.yml&#39;</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="n">params</span><span class="o">.</span><span class="na">init_ds</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;input/dataset/init-ds.{yml,tfr}&#39;</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="n">params</span><span class="o">.</span><span class="na">init_time</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="n">params</span><span class="o">.</span><span class="na">init_steps</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">200000</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="n">params</span><span class="o">.</span><span class="na">ens_size</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="n">params</span><span class="o">.</span><span class="na">restart_from</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="n">params</span><span class="o">.</span><span class="na">restart_conv</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="c1">//========================================================================================</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="c1">// acle parameters =======================================================================</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="n">params</span><span class="o">.</span><span class="na">ref</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;dftb&#39;</span><span class="w"> </span><span class="c1">// reference (module name)</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="n">params</span><span class="o">.</span><span class="na">ref_inp</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;input/dftb/xtb.py&#39;</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="n">params</span><span class="o">.</span><span class="na">mpl</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;pinn&#39;</span><span class="w"> </span><span class="c1">// machine learning potential (module name)</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="n">params</span><span class="o">.</span><span class="na">train_flags</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;--log-every 10000 --ckpt-every 100000 --batch 1 --max-ckpts 1 --shuffle-buffer 3000&#39;</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="n">params</span><span class="o">.</span><span class="na">train_init</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;--init&#39;</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="n">params</span><span class="o">.</span><span class="na">exit_at_max_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="n">params</span><span class="o">.</span><span class="na">max_gen</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="n">params</span><span class="o">.</span><span class="na">min_time</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="n">params</span><span class="o">.</span><span class="na">max_time</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">1000.0</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="n">params</span><span class="o">.</span><span class="na">md_flags</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;--ensemble nvt --dt 0.5 --log-every 100 --T 340&#39;</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="n">params</span><span class="o">.</span><span class="na">collect_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;-f asetraj --subsample uniform --nsample 10 -of idx.xyz -o ds&#39;</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="n">params</span><span class="o">.</span><span class="na">sp_points</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="n">params</span><span class="o">.</span><span class="na">merge_flags</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;-f asetraj&#39;</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="n">params</span><span class="o">.</span><span class="na">old_flag</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;--nsample 240&#39;</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="n">params</span><span class="o">.</span><span class="na">new_flag</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;--psample 100&#39;</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="n">params</span><span class="o">.</span><span class="na">frmsetol</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">0.150</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="n">params</span><span class="o">.</span><span class="na">ermsetol</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">0.005</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="n">params</span><span class="o">.</span><span class="na">fmaxtol</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mf">2.000</span>
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="n">params</span><span class="o">.</span><span class="na">emaxtol</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mf">0.020</span>
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="n">params</span><span class="o">.</span><span class="na">retrain_step</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">100000</span>
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="n">params</span><span class="o">.</span><span class="na">acc_fac</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="n">params</span><span class="o">.</span><span class="na">brake_fac</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span>
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="c1">//========================================================================================</span>
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="c1">// Imports (publish directories are set here) ============================================</span>
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">convert</span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;./module/tips.nf&#39;</span><span class="w"> </span><span class="n">addParams</span><span class="o">(</span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.publish/collect&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">dsmix</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;./module/tips.nf&#39;</span><span class="w"> </span><span class="n">addParams</span><span class="o">(</span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.publish/dsmix&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">merge</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;./module/tips.nf&#39;</span><span class="w"> </span><span class="n">addParams</span><span class="o">(</span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.publish/merge&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;./module/tips.nf&#39;</span><span class="w"> </span><span class="n">addParams</span><span class="o">(</span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.publish/check&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s2">&quot;./module/${params.mpl}.nf&quot;</span><span class="w"> </span><span class="n">addParams</span><span class="o">(</span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.publish/models&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">md</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s2">&quot;./module/${params.mpl}.nf&quot;</span><span class="w"> </span><span class="n">addParams</span><span class="o">(</span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.publish/md&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a><span class="n">include</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s2">&quot;./module/${params.ref}.nf&quot;</span><span class="w"> </span><span class="n">addParams</span><span class="o">(</span><span class="nl">publish:</span><span class="w"> </span><span class="s2">&quot;$params.publish/label&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a><span class="c1">//========================================================================================</span>
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a><span class="c1">// Entry point</span>
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="n">workflow</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a><span class="w">  </span><span class="n">logger</span><span class="o">(</span><span class="s1">&#39;Starting an AcLe Loop&#39;</span><span class="o">)</span>
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a><span class="w">  </span><span class="n">init_ds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">init_ds</span><span class="o">)</span>
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="w">  </span><span class="n">init_geo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">init_geo</span><span class="o">)</span>
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="w">  </span><span class="n">params</span><span class="o">.</span><span class="na">geo_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">init_geo</span><span class="o">.</span><span class="na">size</span>
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a><span class="w">  </span><span class="n">ens_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">ens_size</span><span class="o">.</span><span class="na">toInteger</span><span class="o">()</span>
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a><span class="w">  </span><span class="n">logger</span><span class="o">(</span><span class="s2">&quot;Initial dataset: ${init_ds.name};&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a><span class="w">  </span><span class="n">logger</span><span class="o">(</span><span class="s2">&quot;Initial geometries ($params.geo_size) in ${params.init_geo}&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">restart_from</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="w">    </span><span class="n">init_gen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">restart_from</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span>
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="w">    </span><span class="n">init_models</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;${params.publish}/models/gen${init_gen}/*/model&quot;</span><span class="o">,</span><span class="w"> </span><span class="nl">type:</span><span class="s1">&#39;dir&#39;</span><span class="o">)</span>
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a><span class="w">    </span><span class="n">init_geo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;${params.publish}/check/gen${init_gen}/*/*.xyz&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a><span class="w">    </span><span class="n">init_ds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;${params.publish}/dsmix/${init_gen}/mix-ds.{yml,tfr}&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a><span class="w">    </span><span class="n">logger</span><span class="o">(</span><span class="s2">&quot;restarting from gen$init_gen ensemble of size $ens_size;&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a><span class="w">    </span><span class="n">init_gen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="n">init_gen</span><span class="o">.</span><span class="na">toInteger</span><span class="o">()+</span><span class="mi">1</span><span class="o">).</span><span class="na">toString</span><span class="o">()</span>
+<a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a><span class="w">  </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="o">{</span>
+<a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a><span class="w">    </span><span class="n">init_gen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;0&#39;</span>
+<a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a><span class="w">    </span><span class="n">init_models</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">init_model</span><span class="o">,</span><span class="w"> </span><span class="nl">type:</span><span class="s1">&#39;any&#39;</span><span class="o">)</span>
+<a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(!(</span><span class="n">init_models</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Path</span><span class="o">))</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a><span class="w">      </span><span class="n">logger</span><span class="o">(</span><span class="s2">&quot;restarting from an ensemble of size $ens_size;&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a><span class="w">      </span><span class="n">init_models</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">init_models</span><span class="o">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ens_size</span>
+<a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a><span class="w">      </span><span class="n">logger</span><span class="o">(</span><span class="s2">&quot;starting from scratch with the input $init_models.name of size $ens_size;&quot;</span><span class="o">)</span>
+<a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a><span class="w">  </span><span class="o">}</span>
+<a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a><span class="w">  </span><span class="k">assert</span><span class="w"> </span><span class="n">ens_size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">init_models</span><span class="o">.</span><span class="na">size</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ens_size ($ens_size) does not match input ($init_models.size)&quot;</span>
+<a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a>
+<a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a><span class="w">  </span><span class="n">steps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">init_steps</span><span class="o">.</span><span class="na">toInteger</span><span class="o">()</span>
+<a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a><span class="w">  </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">init_time</span><span class="o">.</span><span class="na">toFloat</span><span class="o">()</span>
+<a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a><span class="w">  </span><span class="n">converge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">restart_conv</span><span class="o">.</span><span class="na">toBoolean</span><span class="o">()</span>
+<a id="__codelineno-3-100" name="__codelineno-3-100" href="#__codelineno-3-100"></a>
+<a id="__codelineno-3-101" name="__codelineno-3-101" href="#__codelineno-3-101"></a><span class="w">  </span><span class="n">init_inp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">init_gen</span><span class="o">,</span><span class="w"> </span><span class="n">init_geo</span><span class="o">,</span><span class="w"> </span><span class="n">init_ds</span><span class="o">,</span><span class="w"> </span><span class="n">init_models</span><span class="o">,</span><span class="w"> </span><span class="n">steps</span><span class="o">,</span><span class="w"> </span><span class="n">time</span><span class="o">,</span><span class="w"> </span><span class="n">converge</span><span class="o">]</span>
+<a id="__codelineno-3-102" name="__codelineno-3-102" href="#__codelineno-3-102"></a><span class="w">  </span><span class="n">ch_inp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Channel</span><span class="o">.</span><span class="na">value</span><span class="o">(</span><span class="n">init_inp</span><span class="o">)</span>
+<a id="__codelineno-3-103" name="__codelineno-3-103" href="#__codelineno-3-103"></a><span class="w">  </span><span class="n">acle</span><span class="o">(</span><span class="n">ch_inp</span><span class="o">)</span>
+<a id="__codelineno-3-104" name="__codelineno-3-104" href="#__codelineno-3-104"></a><span class="o">}</span>
+<a id="__codelineno-3-105" name="__codelineno-3-105" href="#__codelineno-3-105"></a>
+<a id="__codelineno-3-106" name="__codelineno-3-106" href="#__codelineno-3-106"></a><span class="c1">// Main Iteration and Loops ==============================================================</span>
+<a id="__codelineno-3-107" name="__codelineno-3-107" href="#__codelineno-3-107"></a><span class="n">workflow</span><span class="w"> </span><span class="n">acle</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-108" name="__codelineno-3-108" href="#__codelineno-3-108"></a><span class="w">  </span><span class="nl">take:</span>
+<a id="__codelineno-3-109" name="__codelineno-3-109" href="#__codelineno-3-109"></a><span class="w">    </span><span class="n">ch_init</span>
+<a id="__codelineno-3-110" name="__codelineno-3-110" href="#__codelineno-3-110"></a>
+<a id="__codelineno-3-111" name="__codelineno-3-111" href="#__codelineno-3-111"></a><span class="w">  </span><span class="nl">main:</span>
+<a id="__codelineno-3-112" name="__codelineno-3-112" href="#__codelineno-3-112"></a><span class="w">  </span><span class="n">loop</span><span class="o">.</span><span class="na">recurse</span><span class="o">(</span><span class="n">ch_init</span><span class="o">)</span>
+<a id="__codelineno-3-113" name="__codelineno-3-113" href="#__codelineno-3-113"></a><span class="w">    </span><span class="o">.</span><span class="na">until</span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">toInteger</span><span class="o">()&gt;</span><span class="n">params</span><span class="o">.</span><span class="na">max_gen</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">(</span><span class="n">it</span><span class="o">[</span><span class="mi">5</span><span class="o">]&gt;=</span><span class="n">params</span><span class="o">.</span><span class="na">max_time</span><span class="o">.</span><span class="na">toFloat</span><span class="o">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">exit_at_max_time</span><span class="o">)</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-3-114" name="__codelineno-3-114" href="#__codelineno-3-114"></a><span class="o">}</span>
+<a id="__codelineno-3-115" name="__codelineno-3-115" href="#__codelineno-3-115"></a>
+<a id="__codelineno-3-116" name="__codelineno-3-116" href="#__codelineno-3-116"></a><span class="c1">// Loop for each iteration =================================================================</span>
+<a id="__codelineno-3-117" name="__codelineno-3-117" href="#__codelineno-3-117"></a><span class="n">workflow</span><span class="w"> </span><span class="n">loop</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-118" name="__codelineno-3-118" href="#__codelineno-3-118"></a><span class="w">  </span><span class="nl">take:</span><span class="w"> </span><span class="n">ch_inp</span>
+<a id="__codelineno-3-119" name="__codelineno-3-119" href="#__codelineno-3-119"></a>
+<a id="__codelineno-3-120" name="__codelineno-3-120" href="#__codelineno-3-120"></a><span class="w">  </span><span class="nl">main:</span>
+<a id="__codelineno-3-121" name="__codelineno-3-121" href="#__codelineno-3-121"></a><span class="w">  </span><span class="c1">// retrain or keep the model ============================================================</span>
+<a id="__codelineno-3-122" name="__codelineno-3-122" href="#__codelineno-3-122"></a><span class="w">  </span><span class="n">ch_inp</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-123" name="__codelineno-3-123" href="#__codelineno-3-123"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="o">{</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">geo</span><span class="o">,</span><span class="w"> </span><span class="n">ds</span><span class="o">,</span><span class="w"> </span><span class="n">models</span><span class="o">,</span><span class="w"> </span><span class="n">step</span><span class="o">,</span><span class="w"> </span><span class="n">time</span><span class="o">,</span><span class="w"> </span><span class="n">converge</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-124" name="__codelineno-3-124" href="#__codelineno-3-124"></a><span class="w">              </span><span class="nl">keep:</span><span class="w"> </span><span class="n">converge</span>
+<a id="__codelineno-3-125" name="__codelineno-3-125" href="#__codelineno-3-125"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="o">[</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">models</span><span class="o">]</span>
+<a id="__codelineno-3-126" name="__codelineno-3-126" href="#__codelineno-3-126"></a><span class="w">              </span><span class="nl">retrain:</span><span class="w"> </span><span class="o">!</span><span class="n">converge</span>
+<a id="__codelineno-3-127" name="__codelineno-3-127" href="#__codelineno-3-127"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="o">[</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">models</span><span class="o">,</span><span class="w"> </span><span class="n">ds</span><span class="o">,</span><span class="w"> </span><span class="o">(</span><span class="mi">1</span><span class="o">..</span><span class="na">params</span><span class="o">.</span><span class="na">ens_size</span><span class="o">).</span><span class="na">toList</span><span class="o">(),</span><span class="w"> </span><span class="n">step</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-128" name="__codelineno-3-128" href="#__codelineno-3-128"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">{</span><span class="n">ch_model</span><span class="o">}</span>
+<a id="__codelineno-3-129" name="__codelineno-3-129" href="#__codelineno-3-129"></a>
+<a id="__codelineno-3-130" name="__codelineno-3-130" href="#__codelineno-3-130"></a>
+<a id="__codelineno-3-131" name="__codelineno-3-131" href="#__codelineno-3-131"></a><span class="w">  </span><span class="n">ch_model</span><span class="o">.</span><span class="na">retrain</span><span class="o">.</span><span class="na">transpose</span><span class="o">(</span><span class="nl">by:</span><span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">3</span><span class="o">])</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-132" name="__codelineno-3-132" href="#__codelineno-3-132"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">model</span><span class="o">,</span><span class="w"> </span><span class="n">ds</span><span class="o">,</span><span class="w"> </span><span class="n">seed</span><span class="o">,</span><span class="w"> </span><span class="n">steps</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-133" name="__codelineno-3-133" href="#__codelineno-3-133"></a><span class="w">           </span><span class="o">[</span><span class="s2">&quot;gen$gen/model$seed&quot;</span><span class="o">,</span><span class="w"> </span><span class="n">ds</span><span class="o">,</span><span class="w"> </span><span class="n">model</span><span class="o">,</span>
+<a id="__codelineno-3-134" name="__codelineno-3-134" href="#__codelineno-3-134"></a><span class="w">            </span><span class="n">params</span><span class="o">.</span><span class="na">train_flags</span><span class="o">+</span>
+<a id="__codelineno-3-135" name="__codelineno-3-135" href="#__codelineno-3-135"></a><span class="w">            </span><span class="s2">&quot; --seed $seed --train-steps $steps&quot;</span><span class="o">+</span>
+<a id="__codelineno-3-136" name="__codelineno-3-136" href="#__codelineno-3-136"></a><span class="w">            </span><span class="o">(</span><span class="n">gen</span><span class="o">.</span><span class="na">toInteger</span><span class="o">()==</span><span class="mi">1</span><span class="o">?</span><span class="s2">&quot; $params.train_init&quot;</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="o">)]}</span><span class="err">\</span>
+<a id="__codelineno-3-137" name="__codelineno-3-137" href="#__codelineno-3-137"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">train</span>
+<a id="__codelineno-3-138" name="__codelineno-3-138" href="#__codelineno-3-138"></a>
+<a id="__codelineno-3-139" name="__codelineno-3-139" href="#__codelineno-3-139"></a><span class="w">  </span><span class="n">train</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">model</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-140" name="__codelineno-3-140" href="#__codelineno-3-140"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">(</span><span class="n">name</span><span class="o">=~</span><span class="s">/gen(\d+)\/model(\d+)/</span><span class="o">)[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">]+[</span><span class="n">model</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-141" name="__codelineno-3-141" href="#__codelineno-3-141"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">seed</span><span class="o">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">model</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-142" name="__codelineno-3-142" href="#__codelineno-3-142"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">mix</span><span class="w"> </span><span class="o">(</span><span class="n">ch_model</span><span class="o">.</span><span class="na">keep</span><span class="o">.</span><span class="na">transpose</span><span class="o">())</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-143" name="__codelineno-3-143" href="#__codelineno-3-143"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">groupTuple</span><span class="o">(</span><span class="nl">size:</span><span class="n">params</span><span class="o">.</span><span class="na">ens_size</span><span class="o">)</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-144" name="__codelineno-3-144" href="#__codelineno-3-144"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">{</span><span class="n">nx_models</span><span class="o">}</span>
+<a id="__codelineno-3-145" name="__codelineno-3-145" href="#__codelineno-3-145"></a><span class="w">  </span><span class="c1">//=======================================================================================</span>
+<a id="__codelineno-3-146" name="__codelineno-3-146" href="#__codelineno-3-146"></a>
+<a id="__codelineno-3-147" name="__codelineno-3-147" href="#__codelineno-3-147"></a><span class="w">  </span><span class="c1">// sampling with ensable NN =============================================================</span>
+<a id="__codelineno-3-148" name="__codelineno-3-148" href="#__codelineno-3-148"></a><span class="w">  </span><span class="n">ch_inp</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{[</span><span class="n">it</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span><span class="w"> </span><span class="n">it</span><span class="o">[</span><span class="mi">1</span><span class="o">],</span><span class="w"> </span><span class="n">it</span><span class="o">[</span><span class="mi">5</span><span class="o">]]}</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">transpose</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">{</span><span class="n">ch_init_t</span><span class="o">}</span><span class="w"> </span><span class="c1">// init and time</span>
+<a id="__codelineno-3-149" name="__codelineno-3-149" href="#__codelineno-3-149"></a>
+<a id="__codelineno-3-150" name="__codelineno-3-150" href="#__codelineno-3-150"></a><span class="w">  </span><span class="n">nx_models</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-151" name="__codelineno-3-151" href="#__codelineno-3-151"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">combine</span><span class="w"> </span><span class="o">(</span><span class="n">ch_init_t</span><span class="o">,</span><span class="w"> </span><span class="nl">by:</span><span class="mi">0</span><span class="o">)</span><span class="w">  </span><span class="err">\</span>
+<a id="__codelineno-3-152" name="__codelineno-3-152" href="#__codelineno-3-152"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">models</span><span class="o">,</span><span class="w"> </span><span class="n">init</span><span class="o">,</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-153" name="__codelineno-3-153" href="#__codelineno-3-153"></a><span class="w">           </span><span class="o">[</span><span class="s2">&quot;gen$gen/$init.baseName&quot;</span><span class="o">,</span><span class="w"> </span><span class="n">models</span><span class="o">,</span><span class="w"> </span><span class="n">init</span><span class="o">,</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">md_flags</span><span class="o">+</span><span class="s2">&quot; --t $t&quot;</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-154" name="__codelineno-3-154" href="#__codelineno-3-154"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">md</span>
+<a id="__codelineno-3-155" name="__codelineno-3-155" href="#__codelineno-3-155"></a><span class="w">  </span><span class="n">md</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">traj</span><span class="o">.</span><span class="na">set</span><span class="w"> </span><span class="o">{</span><span class="n">ch_trajs</span><span class="o">}</span>
+<a id="__codelineno-3-156" name="__codelineno-3-156" href="#__codelineno-3-156"></a><span class="w">  </span><span class="c1">//=======================================================================================</span>
+<a id="__codelineno-3-157" name="__codelineno-3-157" href="#__codelineno-3-157"></a>
+<a id="__codelineno-3-158" name="__codelineno-3-158" href="#__codelineno-3-158"></a><span class="w">  </span><span class="c1">// relabel with reference ===============================================================</span>
+<a id="__codelineno-3-159" name="__codelineno-3-159" href="#__codelineno-3-159"></a><span class="w">  </span><span class="n">ref_inp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">ref_inp</span><span class="o">)</span>
+<a id="__codelineno-3-160" name="__codelineno-3-160" href="#__codelineno-3-160"></a><span class="w">  </span><span class="n">ch_trajs</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-161" name="__codelineno-3-161" href="#__codelineno-3-161"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">traj</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">traj</span><span class="o">,</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">collect_flags</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-162" name="__codelineno-3-162" href="#__codelineno-3-162"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-163" name="__codelineno-3-163" href="#__codelineno-3-163"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">flatMap</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">inps</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">inps</span><span class="o">.</span><span class="na">collect</span><span class="w"> </span><span class="o">{[</span><span class="s2">&quot;$name/$it.baseName&quot;</span><span class="o">,</span><span class="w"> </span><span class="n">it</span><span class="o">]}}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-164" name="__codelineno-3-164" href="#__codelineno-3-164"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">geo</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">ref_inp</span><span class="o">,</span><span class="w"> </span><span class="n">geo</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-165" name="__codelineno-3-165" href="#__codelineno-3-165"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">sp</span>
+<a id="__codelineno-3-166" name="__codelineno-3-166" href="#__codelineno-3-166"></a>
+<a id="__codelineno-3-167" name="__codelineno-3-167" href="#__codelineno-3-167"></a><span class="w">  </span><span class="n">sp</span><span class="o">.</span><span class="na">out</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-168" name="__codelineno-3-168" href="#__codelineno-3-168"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">(</span><span class="n">name</span><span class="o">=~</span><span class="s">/(gen\d+\/.+)\/(\d+)/</span><span class="o">)[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">]+[</span><span class="n">logs</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-169" name="__codelineno-3-169" href="#__codelineno-3-169"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">idx</span><span class="o">,</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">idx</span><span class="o">.</span><span class="na">toInteger</span><span class="o">(),</span><span class="w"> </span><span class="n">logs</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-170" name="__codelineno-3-170" href="#__codelineno-3-170"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">groupTuple</span><span class="o">(</span><span class="nl">size:</span><span class="n">params</span><span class="o">.</span><span class="na">sp_points</span><span class="o">)</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-171" name="__codelineno-3-171" href="#__codelineno-3-171"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">idx</span><span class="o">,</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">idx</span><span class="o">,</span><span class="w"> </span><span class="n">logs</span><span class="o">,</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">merge_flags</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-172" name="__codelineno-3-172" href="#__codelineno-3-172"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">merge</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-173" name="__codelineno-3-173" href="#__codelineno-3-173"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">{</span><span class="n">ch_new_ds</span><span class="o">}</span>
+<a id="__codelineno-3-174" name="__codelineno-3-174" href="#__codelineno-3-174"></a><span class="w">  </span><span class="c1">//=======================================================================================</span>
+<a id="__codelineno-3-175" name="__codelineno-3-175" href="#__codelineno-3-175"></a>
+<a id="__codelineno-3-176" name="__codelineno-3-176" href="#__codelineno-3-176"></a><span class="w">  </span><span class="c1">// check convergence ====================================================================</span>
+<a id="__codelineno-3-177" name="__codelineno-3-177" href="#__codelineno-3-177"></a><span class="w">  </span><span class="n">ch_new_ds</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-178" name="__codelineno-3-178" href="#__codelineno-3-178"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">join</span><span class="o">(</span><span class="n">ch_trajs</span><span class="o">)</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-179" name="__codelineno-3-179" href="#__codelineno-3-179"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-180" name="__codelineno-3-180" href="#__codelineno-3-180"></a>
+<a id="__codelineno-3-181" name="__codelineno-3-181" href="#__codelineno-3-181"></a><span class="w">  </span><span class="n">check</span><span class="o">.</span><span class="na">out</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-182" name="__codelineno-3-182" href="#__codelineno-3-182"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="n">geo</span><span class="o">,</span><span class="n">msg</span><span class="o">-&gt;</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-183" name="__codelineno-3-183" href="#__codelineno-3-183"></a><span class="w">          </span><span class="o">[(</span><span class="n">name</span><span class="o">=~</span><span class="s">/gen(\d+)\/.+/</span><span class="o">)[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">],</span><span class="w"> </span><span class="n">geo</span><span class="o">,</span><span class="w"> </span><span class="n">msg</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s1">&#39;Converged&#39;</span><span class="o">)]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-184" name="__codelineno-3-184" href="#__codelineno-3-184"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">groupTuple</span><span class="o">(</span><span class="nl">size:</span><span class="n">params</span><span class="o">.</span><span class="na">geo_size</span><span class="o">.</span><span class="na">toInteger</span><span class="o">())</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-185" name="__codelineno-3-185" href="#__codelineno-3-185"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">geo</span><span class="o">,</span><span class="w"> </span><span class="n">conv</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">geo</span><span class="o">,</span><span class="w"> </span><span class="n">conv</span><span class="o">.</span><span class="na">every</span><span class="o">()]}</span>
+<a id="__codelineno-3-186" name="__codelineno-3-186" href="#__codelineno-3-186"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">{</span><span class="n">nx_geo_converge</span><span class="o">}</span>
+<a id="__codelineno-3-187" name="__codelineno-3-187" href="#__codelineno-3-187"></a>
+<a id="__codelineno-3-188" name="__codelineno-3-188" href="#__codelineno-3-188"></a><span class="w">  </span><span class="c1">//=======================================================================================</span>
+<a id="__codelineno-3-189" name="__codelineno-3-189" href="#__codelineno-3-189"></a>
+<a id="__codelineno-3-190" name="__codelineno-3-190" href="#__codelineno-3-190"></a><span class="w">  </span><span class="c1">// mix the new dataset ==================================================================</span>
+<a id="__codelineno-3-191" name="__codelineno-3-191" href="#__codelineno-3-191"></a><span class="w">  </span><span class="n">ch_inp</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{[</span><span class="n">it</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span><span class="w"> </span><span class="n">it</span><span class="o">[</span><span class="mi">2</span><span class="o">]]}.</span><span class="na">set</span><span class="o">{</span><span class="w"> </span><span class="n">ch_old_ds</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-3-192" name="__codelineno-3-192" href="#__codelineno-3-192"></a><span class="w">  </span><span class="n">ch_new_ds</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-193" name="__codelineno-3-193" href="#__codelineno-3-193"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">idx</span><span class="o">,</span><span class="w"> </span><span class="n">ds</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[(</span><span class="n">name</span><span class="o">=~</span><span class="s">/gen(\d+)\/.+/</span><span class="o">)[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">],</span><span class="w"> </span><span class="n">ds</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-194" name="__codelineno-3-194" href="#__codelineno-3-194"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">groupTuple</span><span class="o">(</span><span class="nl">size:</span><span class="n">params</span><span class="o">.</span><span class="na">geo_size</span><span class="o">.</span><span class="na">toInteger</span><span class="o">())</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-195" name="__codelineno-3-195" href="#__codelineno-3-195"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">join</span><span class="o">(</span><span class="n">ch_old_ds</span><span class="o">)</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-196" name="__codelineno-3-196" href="#__codelineno-3-196"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">it</span><span class="o">+[</span><span class="n">params</span><span class="o">.</span><span class="na">new_flag</span><span class="o">,</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">old_flag</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-197" name="__codelineno-3-197" href="#__codelineno-3-197"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">dsmix</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-198" name="__codelineno-3-198" href="#__codelineno-3-198"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">{</span><span class="n">nx_ds</span><span class="o">}</span>
+<a id="__codelineno-3-199" name="__codelineno-3-199" href="#__codelineno-3-199"></a><span class="w">  </span><span class="c1">//=======================================================================================</span>
+<a id="__codelineno-3-200" name="__codelineno-3-200" href="#__codelineno-3-200"></a>
+<a id="__codelineno-3-201" name="__codelineno-3-201" href="#__codelineno-3-201"></a><span class="w">  </span><span class="c1">// combine everything for new inputs ====================================================</span>
+<a id="__codelineno-3-202" name="__codelineno-3-202" href="#__codelineno-3-202"></a><span class="w">  </span><span class="n">ch_inp</span><span class="o">.</span><span class="na">map</span><span class="o">{[</span><span class="n">it</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span><span class="w"> </span><span class="n">it</span><span class="o">[</span><span class="mi">4</span><span class="o">]]}.</span><span class="na">set</span><span class="w"> </span><span class="o">{</span><span class="n">nx_step</span><span class="o">}</span>
+<a id="__codelineno-3-203" name="__codelineno-3-203" href="#__codelineno-3-203"></a><span class="w">  </span><span class="n">ch_inp</span><span class="o">.</span><span class="na">map</span><span class="o">{[</span><span class="n">it</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span><span class="w"> </span><span class="n">it</span><span class="o">[</span><span class="mi">5</span><span class="o">]]}.</span><span class="na">set</span><span class="w"> </span><span class="o">{</span><span class="n">nx_time</span><span class="o">}</span>
+<a id="__codelineno-3-204" name="__codelineno-3-204" href="#__codelineno-3-204"></a>
+<a id="__codelineno-3-205" name="__codelineno-3-205" href="#__codelineno-3-205"></a><span class="w">  </span><span class="n">acc_fac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">acc_fac</span><span class="o">.</span><span class="na">toFloat</span><span class="o">()</span>
+<a id="__codelineno-3-206" name="__codelineno-3-206" href="#__codelineno-3-206"></a><span class="w">  </span><span class="n">brake_fac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">brake_fac</span><span class="o">.</span><span class="na">toFloat</span><span class="o">()</span>
+<a id="__codelineno-3-207" name="__codelineno-3-207" href="#__codelineno-3-207"></a><span class="w">  </span><span class="n">min_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">min_time</span><span class="o">.</span><span class="na">toFloat</span><span class="o">()</span>
+<a id="__codelineno-3-208" name="__codelineno-3-208" href="#__codelineno-3-208"></a><span class="w">  </span><span class="n">max_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">max_time</span><span class="o">.</span><span class="na">toFloat</span><span class="o">()</span>
+<a id="__codelineno-3-209" name="__codelineno-3-209" href="#__codelineno-3-209"></a><span class="w">  </span><span class="n">retrain_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">retrain_step</span><span class="o">.</span><span class="na">toInteger</span><span class="o">()</span>
+<a id="__codelineno-3-210" name="__codelineno-3-210" href="#__codelineno-3-210"></a>
+<a id="__codelineno-3-211" name="__codelineno-3-211" href="#__codelineno-3-211"></a><span class="w">  </span><span class="n">nx_geo_converge</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">join</span><span class="o">(</span><span class="n">nx_models</span><span class="o">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">join</span><span class="o">(</span><span class="n">nx_ds</span><span class="o">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">join</span><span class="o">(</span><span class="n">nx_time</span><span class="o">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">join</span><span class="w"> </span><span class="o">(</span><span class="n">nx_step</span><span class="o">)</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-212" name="__codelineno-3-212" href="#__codelineno-3-212"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">{</span><span class="n">gen</span><span class="o">,</span><span class="w"> </span><span class="n">geo</span><span class="o">,</span><span class="w"> </span><span class="n">converge</span><span class="o">,</span><span class="w"> </span><span class="n">models</span><span class="o">,</span><span class="w"> </span><span class="n">ds</span><span class="o">,</span><span class="w"> </span><span class="n">time</span><span class="o">,</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-213" name="__codelineno-3-213" href="#__codelineno-3-213"></a><span class="w">           </span><span class="o">[(</span><span class="n">gen</span><span class="o">.</span><span class="na">toInteger</span><span class="o">()+</span><span class="mi">1</span><span class="o">).</span><span class="na">toString</span><span class="o">(),</span>
+<a id="__codelineno-3-214" name="__codelineno-3-214" href="#__codelineno-3-214"></a><span class="w">            </span><span class="n">geo</span><span class="o">,</span><span class="w"> </span><span class="n">ds</span><span class="o">,</span><span class="w"> </span><span class="n">models</span><span class="o">,</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-215" name="__codelineno-3-215" href="#__codelineno-3-215"></a><span class="w">            </span><span class="n">converge</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">step</span><span class="o">+</span><span class="n">retrain_step</span><span class="o">,</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-216" name="__codelineno-3-216" href="#__codelineno-3-216"></a><span class="w">            </span><span class="n">converge</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">time</span><span class="o">*</span><span class="n">acc_fac</span><span class="o">,</span><span class="w"> </span><span class="n">max_time</span><span class="o">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">time</span><span class="o">*</span><span class="n">brake_fac</span><span class="o">,</span><span class="w"> </span><span class="n">min_time</span><span class="o">),</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-217" name="__codelineno-3-217" href="#__codelineno-3-217"></a><span class="w">            </span><span class="n">converge</span><span class="o">]}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-218" name="__codelineno-3-218" href="#__codelineno-3-218"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">{</span><span class="n">nx_inp</span><span class="o">}</span>
+<a id="__codelineno-3-219" name="__codelineno-3-219" href="#__codelineno-3-219"></a><span class="w">  </span><span class="c1">//=======================================================================================</span>
+<a id="__codelineno-3-220" name="__codelineno-3-220" href="#__codelineno-3-220"></a>
+<a id="__codelineno-3-221" name="__codelineno-3-221" href="#__codelineno-3-221"></a><span class="w">  </span><span class="n">ch_inp</span><span class="o">.</span><span class="na">subscribe</span><span class="w"> </span><span class="o">{</span><span class="n">logger</span><span class="o">(</span><span class="s2">&quot;[gen${it[0]}] ${it[-1]? &#39;not training&#39;: &#39;training&#39;} the models.&quot;</span><span class="o">)}</span>
+<a id="__codelineno-3-222" name="__codelineno-3-222" href="#__codelineno-3-222"></a><span class="w">  </span><span class="n">check</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">subscribe</span><span class="w"> </span><span class="o">{</span><span class="n">name</span><span class="o">,</span><span class="w"> </span><span class="n">geo</span><span class="o">,</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">logger</span><span class="o">(</span><span class="s2">&quot;[$name] ${msg.trim()}&quot;</span><span class="o">)}</span>
+<a id="__codelineno-3-223" name="__codelineno-3-223" href="#__codelineno-3-223"></a><span class="w">  </span><span class="n">nx_inp</span><span class="o">.</span><span class="na">subscribe</span><span class="w"> </span><span class="o">{</span><span class="n">logger</span><span class="o">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">80</span><span class="o">+</span><span class="s1">&#39;\n&#39;</span><span class="o">+</span><span class="s2">&quot;[gen${it[0]}] next time scale ${it[5]} ps, ${it[6] ? &#39;no training planned&#39; : &#39;next training step &#39;+it[4]}.&quot;</span><span class="o">)</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="err">\</span>
+<a id="__codelineno-3-224" name="__codelineno-3-224" href="#__codelineno-3-224"></a>
+<a id="__codelineno-3-225" name="__codelineno-3-225" href="#__codelineno-3-225"></a><span class="w">  </span><span class="nl">emit:</span>
+<a id="__codelineno-3-226" name="__codelineno-3-226" href="#__codelineno-3-226"></a><span class="w">  </span><span class="n">nx_inp</span>
+<a id="__codelineno-3-227" name="__codelineno-3-227" href="#__codelineno-3-227"></a><span class="o">}</span>
+</code></pre></div>
+</details>
+    </div>
+
+  </div>
+
+  <div class="page">
+    <div class="page-prev">
+      
+      <a href="../../manual/" title="Overview"><span>«</span> Previous</a>
+      
+    </div>
+    <div class="page-next">
+      
+      <a href="../../module/tips/" title="TIPS" />Next <span>»</span></a>
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    Built with <a href="https://www.mkdocs.org">mkdocs</a> and the <a href="https://github.com/yqshao/mkdocs-flux-theme">flux</a> theme.
+  </div>
+</body>
+</html>

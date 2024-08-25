@@ -1,0 +1,206 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>Home - PiNNAcLe</title>
+
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/notebook.css">
+  <link rel="stylesheet" href="css/pygments.css">
+  <link rel="icon" href="data:,">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+  <script>
+    var base_url = ".";
+    $(document).ready(function(){
+          $('table').wrap('<div class="table-wrapper"></div>');
+    });
+  </script>
+
+  <script src="js/mike.js"></script>
+
+  
+    <script src="js/mathjax.js"></script>
+  
+    <script src="search/main.js"></script>
+  
+
+</head>
+
+<body>
+  <header class="header">
+    <ul>
+      <li id="logo">
+        <a href=".">PiNN<span>AcLe</span></a>
+      </li>
+      
+      
+  <li class="active tab" >
+    <a href="." class="">
+      Home
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="tutorial/get_started/">
+      Tutorial
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="manual/">
+      Manual
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+      
+      <li class="tools">
+        
+          <a id="nav-toggle" class="tool lonely" onclick="nav_toggle()">
+        
+          <svg><use xlink:href="svg/sprite.svg#menu-2"></use></svg>
+        </a>
+        <script>
+           function nav_toggle() {
+               var bar = document.getElementById("tab-bar");
+               if (bar.style.display === "none") {
+                   bar.style.display = "block";
+               } else {
+                   bar.style.display = "none";
+               }
+           }
+          function nav_reset() {
+              var bar = document.getElementById("tab-bar");
+              if (window.innerWidth>950){
+                  bar.style.display = "block";
+              } else {
+                  bar.style.display = "none";
+              }
+          }
+          window.onresize = nav_reset;
+        </script>
+        
+        
+        <a class="tool" href="https://github.com/teoroo-cmc/pinnacle/">
+          <svg><use xlink:href="svg/sprite.svg#brand-github"></use></svg>
+          <span>teoroo-cmc/pinnacle</span>
+        </a>
+        
+      </li>
+    </ul>
+  </header>
+
+
+  <div id="main">
+    <div id="tab-bar">
+      <ul>
+      
+       
+  <li class="active tab" >
+    <a href="." class="">
+      Home
+    </a>
+  </li>
+
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="tutorial/get_started/">
+      Tutorial
+    </a>
+  </li>
+
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="manual/">
+      Manual
+    </a>
+  </li>
+
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+         
+      
+      </ul>
+    </div>
+
+    <div id="content">
+      <h1 id="pinnacle-documentation">PiNNAcLe documentation</h1>
+<p>PiNNAcLe (<strong>PiNN</strong> <strong>Ac</strong>tivated <strong>Le</strong>arning) is a collection of workflows
+built for activated learning and sampling of interatomic potentials. The
+workflows are implemented in the <a href="https://nextflow.io">nextflow</a> language to enable their scalable
+execution.</p>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="https://github.com/Teoroo-CMC/PiNN">PiNN</a>: Interatomic potential supported by PiNNAcLe;</li>
+<li><a href="https://github.com/Teoroo-CMC/tips">tips</a>: Python/CLI utility for potential sampling.</li>
+</ul>
+    </div>
+
+  </div>
+
+  <div class="page">
+    <div class="page-prev">
+      
+    </div>
+    <div class="page-next">
+      
+      <a href="tutorial/get_started/" title="Get started" />Next <span>»</span></a>
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    Built with <a href="https://www.mkdocs.org">mkdocs</a> and the <a href="https://github.com/yqshao/mkdocs-flux-theme">flux</a> theme.
+  </div>
+</body>
+</html>

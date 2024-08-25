@@ -1,0 +1,70 @@
+\documentclass[tikz,convert=pdf2svg]{standalone}
+\usetikzlibrary{shapes,arrows,positioning}
+\usepackage[fira]{fontsetup}
+\begin{document}
+
+\definecolor{mc-db}{HTML}{004488}
+\definecolor{mc-dr}{HTML}{994455}
+\definecolor{mc-dy}{HTML}{997700}
+\definecolor{mc-lb}{HTML}{6699CC}
+\definecolor{mc-lr}{HTML}{EE99AA}
+\definecolor{mc-ly}{HTML}{EECC66}
+
+\begin{tikzpicture}[node distance = .5cm, auto]
+  \tikzstyle{data} = [rectangle, minimum height=.7cm, minimum width=2cm, draw=mc-dr, very thick, text centered, inner sep=5pt, outer sep=0pt]
+  \tikzstyle{wf} =   [rectangle, minimum height=.7cm, minimum width=2cm, fill=mc-ly,  text centered, inner sep=5pt]
+  \tikzstyle{line} = [draw,very thick,-stealth]
+  \tikzstyle{bdot} = [outer sep=0, inner sep=1, draw, fill, circle]
+  \tikzstyle{loop} = [draw, chamfered rectangle, chamfered rectangle xsep=2cm,very thick, draw=mc-db]
+  % Place nodes
+  \node [bdot] (train) {};
+  \node [data, left=of train, text width=2.5cm] (init-ds) {ds-gen\color{mc-dr}{\$\{i\}}};
+  \node [data, text width=2.5cm, below=of init-ds] (init-step) {step-gen\color{mc-dr}{\$\{i\}}};
+  \node [data, text width=2.5cm, below=0 of init-step] (init-geo) {geo-gen\color{mc-dr}{\$\{i\}}};
+  \node [data, text width=2.5cm, below=0 of init-geo] (init-time) {time-gen\color{mc-dr}{\$\{i\}}};
+  \node [diamond, right=of train, draw=mc-db, very thick, aspect=3] (iftrain) {extend?};
+  \node [data, text width=2.5cm, above=0.5cm of init-ds] (init-model) {model-gen\color{mc-dr}{\$\{i\}}};
+  \node [wf, right=of iftrain] (train2) {PiNN Train};
+  \node [data, right=of train2, text width=] (model) {model-gen\color{mc-dr}{\$\{i+1\}}};
+  \node [wf, right=of model] (emd) {PiNN MD};
+  \node [data, right=of emd, text width=] (traj) {traj-gen\color{mc-dr}{\$\{i+1\}}};
+  \node [wf, right=of traj] (cp2k) {CP2K Label};
+  \node [wf, right=of cp2k] (mix) {Mixing};
+  \node [wf, below=of cp2k] (conv) {Converge?};
+  \node [data, right=of mix] (new-ds) {ds-gen\color{mc-dr}{\$\{i+1\}}};
+  \node [data, text width=3cm, below=of conv] (new-step) {step-gen\color{mc-dr}{\$\{i+1\}}};
+  \node [data, text width=3cm, below=0 of new-step] (new-geo) {geo-gen\color{mc-dr}{\$\{i+1\}}};
+  \node [data, text width=3cm, below=0 of new-geo] (new-time) {time-gen\color{mc-dr}{\$\{i+1\}}};
+
+  \path [line,-] (init-ds) -- (train);
+  \path [line,-] (init-model) -| (train);
+  \path [line] (train) -- (iftrain);
+  \path [line] (iftrain) -- (train2) node [midway] {yes};
+  \path [line] (train2) -- (model);
+  \path [line] (model) -- (emd);
+  \path [line] (emd) -- (traj);
+  \path [line] (traj) -- (cp2k);
+  \path [data, dashed, -stealth] (iftrain) -- (iftrain|-init-model) -- ([xshift=0.25cm]init-model-|model.north west) node [midway] {skip} -- ([xshift=0.25cm]model.north west);
+  \path [line] (init-ds) |- ([yshift=0.25cm]init-ds.north) -|(mix);
+  \node [bdot] at ([xshift=0.5cm]init-geo.south east) {};
+  \path [line,-] (init-step) -| (train);
+  \path [draw, very thick] (init-geo) -- ([xshift=0.5cm]init-geo.east) -- ([xshift=0.5cm]init-geo.south east);
+  \path [draw, very thick] (init-time) -- ([xshift=0.5cm]init-time.east) -- ([xshift=0.5cm]init-time.north east);
+  \path [line] ([xshift=0.5cm]init-time.north east) -- ([xshift=0.5cm]init-time.north east) -| (emd);
+  \path [line] (cp2k) -- (mix);
+  \path [line] (traj) |- (conv);
+  \path [line] (cp2k) -- (conv);
+  \path [line] (mix) -- (new-ds);
+  \path [line] (conv) -- (new-step);
+  \node [right=of new-ds, bdot] (new-all) {};
+  \node [right=of new-all, loop, align=center] (ifnext){$\mathrm{gen}>\mathrm{gen_{max}}$?};
+  \path [line,-] ([xshift=-.25cm]model.north east) -- ([xshift=-.25cm]model.north east |- init-model) -- (init-model -| new-all) -- (new-all);
+  \path [line,-] (new-ds) -- (new-all);
+  \path [line,-] (new-geo) -| (new-all);
+  \path [line] (new-all) -- (ifnext);
+  \node[right=1cm of ifnext] (next) {Next Generation};
+  \path [line] (ifnext) -- (next) node [midway] {yes};
+  \node[below=1cm of ifnext] (stop) {stop};
+  \path [line] (ifnext) -- (stop) node [midway] {no};
+\end{tikzpicture}
+\end{document}
