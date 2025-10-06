@@ -68,10 +68,13 @@ copier gh:teoroo-cmc/pinnacle
 [PiNN]: https://github.com/Teoroo-CMC/PiNN
 [tips]: https://github.com/Teoroo-CMC/tips
 
-## About
+## About and reference
 
 PiNNAcLe is developed by [Yunqi Shao][yqshao] at the [TeC group][tec] in Uppsala
 University, Sweden.
+
+Shao, Y. and Zhang, C. PiNNAcLe: Adaptive Learn-On-The-Fly Algorithm for Machine-Learning Potential, arXiv preprint arXiv:2409.08886
+
 
 [yqshao]:https://github.com/yqshao
 [tec]:https://tec-group.github.io/
