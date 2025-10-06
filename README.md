@@ -63,10 +63,8 @@ copier gh:teoroo-cmc/pinnacle
 ## See also
 
 - [PiNN]: Interatomic potential supported by PiNNAcLe;
-- [tips]: Python/CLI utility for potential sampling.
 
 [PiNN]: https://github.com/Teoroo-CMC/PiNN
-[tips]: https://github.com/Teoroo-CMC/tips
 
 ## About and reference
 
