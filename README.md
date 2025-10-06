@@ -7,6 +7,8 @@ execution.
 
 [nextflow]: https://nextflow.io
 
+<img src="/docs/figure/schematics.png" alt="pinn_toc" style="height: 180px; width:360px;"/>
+
 ## Quick start
 
 By default, PiNNAcLe workflows are executed with containerized environments, so
@@ -34,7 +36,7 @@ profile.
 The default workflow in PiNNAcLe is called [acle] (activated learning). Each
 implemented workflow has its set of parameters that can be set at runtime:
 
-[acle]: https://teoroo-cmc.github.io/pinnacle/latest/entries/acle.md
+[acle]: docs/recipe/acle.md
 
 ```
 nextflow run yqshao/pinnacle --proj=testrun --initDs=myDs.{yml,tfr} --initModel=myModel.yml
@@ -45,7 +47,7 @@ The job history is automatically logged by nextflow, which one can recover by
 parameter file. Available parameters, along with parameter templates are given
 for each workflow entry in the [documentation][entries].
 
-[entries]: https://teoroo-cmc.github.io/pinnacle/latest/entries/overview.md
+[entries]: docs/profiles/overview.md
 
 
 ## Extending the workflow
