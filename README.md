@@ -1,7 +1,7 @@
-# PiNNAcLe: activated learning with PiNN
+# PiNNAcLe: active learn-on-the-fly with PiNN
 
-PiNNAcLe (**PiNN** **Ac**tivated **Le**arning) is a collection of workflows
-built for activated learning and sampling of interatomic potentials. The
+PiNNAcLe (**PiNN** **Ac**tive **Le**arn-on-the-fly) is a collection of workflows
+built for active learning and sampling of machine learning interatomic potentials. Besides the common modules of sampling, labelling and training, PiNNAcLe has introduced an adaptive time scaler to ensure the long-timescale stability of the final model. The
 workflows are implemented in the [nextflow] language to enable their scalable
 execution.
 
