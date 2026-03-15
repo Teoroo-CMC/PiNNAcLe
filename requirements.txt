@@ -1,0 +1,1 @@
+mkdocs-flux[dev] @ git+https://github.com/yqshao/mkdocs-flux.git

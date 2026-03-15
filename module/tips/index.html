@@ -1,0 +1,679 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>TIPS - PiNNAcLe</title>
+
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/notebook.css">
+  <link rel="stylesheet" href="../../css/pygments.css">
+  <link rel="icon" href="data:,">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+  <script>
+    var base_url = "../..";
+    $(document).ready(function(){
+          $('table').wrap('<div class="table-wrapper"></div>');
+    });
+  </script>
+
+  <script src="../../js/mike.js"></script>
+
+  
+    <script src="../../js/mathjax.js"></script>
+  
+    <script src="../../search/main.js"></script>
+  
+
+</head>
+
+<body>
+  <header class="header">
+    <ul>
+      <li id="logo">
+        <a href="../..">PiNN<span>AcLe</span></a>
+      </li>
+      
+      
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../tutorial/get_started/">
+      Tutorial
+    </a>
+  </li>
+
+      
+      
+  
+  <li class="active tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+      
+      <li class="tools">
+        
+          <a id="nav-toggle" class="tool" onclick="nav_toggle()">
+        
+          <svg><use xlink:href="../../svg/sprite.svg#menu-2"></use></svg>
+        </a>
+        <script>
+           function nav_toggle() {
+               var bar = document.getElementById("tab-bar");
+               if (bar.style.display === "none") {
+                   bar.style.display = "block";
+               } else {
+                   bar.style.display = "none";
+               }
+           }
+          function nav_reset() {
+              var bar = document.getElementById("tab-bar");
+              if (window.innerWidth>950){
+                  bar.style.display = "block";
+              } else {
+                  bar.style.display = "none";
+              }
+          }
+          window.onresize = nav_reset;
+        </script>
+        
+        
+        <a class="tool" href="https://github.com/teoroo-cmc/pinnacle/">
+          <svg><use xlink:href="../../svg/sprite.svg#brand-github"></use></svg>
+          <span>teoroo-cmc/pinnacle</span>
+        </a>
+        
+      </li>
+    </ul>
+  </header>
+
+
+  <div id="main">
+    <div id="tab-bar">
+      <ul>
+      
+       
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../tutorial/get_started/">
+      Tutorial
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li class="active tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+                 
+                   
+    <li >
+      <a href="../../manual/" class="">
+        Overview
+      </a>
+    </li>
+
+                 
+                   
+  <a class="nav-title" > Recipes </a>
+  
+    
+    <li >
+      <a href="../../recipe/acle/" class="">
+        AcLe
+      </a>
+    </li>
+
+  
+
+                 
+                   
+  <a class="nav-title" > Modules </a>
+  
+    
+    <li class="active">
+      <a href="./" class="">
+        TIPS
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../pinn/" class="">
+        PiNN
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../cp2k/" class="">
+        CP2K
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../ase/" class="">
+        ASE
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../dftb/" class="">
+        DFTB+
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../molutils/" class="">
+        molutils
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../lammps/" class="">
+        LAMMPS
+      </a>
+    </li>
+
+  
+
+                 
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+      </ul>
+    </div>
+
+    <div id="content">
+      <h1 id="tips-module">TIPS module</h1>
+<p>The <code>tips.nf</code> module contains several processes supplied by the TIPS library.</p>
+<h2 id="convertds">convertDS</h2>
+<p>The <code>convertDS</code> process converts a one dataset to another. The input/output
+formats are controlled by the <code>flags</code> channel.</p>
+<h3 id="channel-specification">Channel specification</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>i/o</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>in[0]</code></td>
+<td>an id to identify the process</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td><code>path</code></td>
+<td><code>in[1]</code></td>
+<td>input dataset</td>
+</tr>
+<tr>
+<td><code>flag</code></td>
+<td><code>val</code></td>
+<td><code>in[2]</code></td>
+<td>flags for <code>tips convert</code></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>out[0]</code></td>
+<td>same as input</td>
+</tr>
+<tr>
+<td><code>converted</code></td>
+<td><code>path</code></td>
+<td><code>out[1]</code></td>
+<td>converted dataset [<code>converted.*</code>]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mergeds">mergeDS</h2>
+<p>The <code>mergeDS</code> process merges a number of single point calculations into one.
+Note that the process also expect a <code>idx</code> element in the input channel, which
+should give an index of the corresponding single point calculation, and will be
+saved into the <code>merged.idx</code> file.</p>
+<h3 id="channel-specification_1">Channel specification</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>i/o</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>in[0]</code></td>
+<td>an id to identify the process</td>
+</tr>
+<tr>
+<td><code>idx</code></td>
+<td><code>val</code></td>
+<td><code>in[1]</code></td>
+<td>indices of single point simulations</td>
+</tr>
+<tr>
+<td><code>logs</code></td>
+<td><code>path</code></td>
+<td><code>in[2]</code></td>
+<td>logs from single point computations</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>out[0]</code></td>
+<td>same as input</td>
+</tr>
+<tr>
+<td><code>idx</code></td>
+<td><code>path</code></td>
+<td><code>out[1]</code></td>
+<td>file that records the indices [<code>merged.idx</code>]</td>
+</tr>
+<tr>
+<td><code>merged</code></td>
+<td><code>path</code></td>
+<td><code>out[2]</code></td>
+<td>merged dataset [<code>merged.traj</code>]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mixds">mixDS</h2>
+<p>The <code>mixDS</code> process takes two datasets, called <code>newDS</code> and <code>oldDS</code>, and two
+flags <code>newFlag</code> and <code>oldFlag</code>, the datasets are first subsampled with
+corresponding flags, and them merged together. This process is mainly used to
+update a training set in an activated learning loop.</p>
+<h3 id="channel-specification_2">Channel specification</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>i/o</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>in[0]</code></td>
+<td>an id to identify the process</td>
+</tr>
+<tr>
+<td><code>newDS</code></td>
+<td><code>path</code></td>
+<td><code>in[1]</code></td>
+<td>new dataset</td>
+</tr>
+<tr>
+<td><code>oldDS</code></td>
+<td><code>path</code></td>
+<td><code>in[2]</code></td>
+<td>old dataset</td>
+</tr>
+<tr>
+<td><code>newFlag</code></td>
+<td><code>path</code></td>
+<td><code>in[3]</code></td>
+<td>subsample flag for newDS</td>
+</tr>
+<tr>
+<td><code>oldFlag</code></td>
+<td><code>path</code></td>
+<td><code>in[4]</code></td>
+<td>subsample flag for oldDS</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>out[0]</code></td>
+<td>same as input</td>
+</tr>
+<tr>
+<td><code>idx</code></td>
+<td><code>path</code></td>
+<td><code>out[1]</code></td>
+<td>merged index (<code>merged.idx</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="checkconverge">checkConverge</h2>
+<p>This workflow compares a sampled trajectories to labelled data. The output
+geometry will be:</p>
+<ul>
+<li>The last frame of the trajectory if the trajectory is deemed converted;</li>
+<li>The first frame of the trajectory otherwise.</li>
+</ul>
+<p>The convergence is controlled by the following parameters.</p>
+<h3 id="channel-specification_3">Channel specification</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>i/o</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>in[0]</code></td>
+<td>an id to identify the process</td>
+</tr>
+<tr>
+<td><code>idx</code></td>
+<td><code>path</code></td>
+<td><code>in[1]</code></td>
+<td>index of labels in the trajectory</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td><code>val</code></td>
+<td><code>in[2]</code></td>
+<td>labelled data set</td>
+</tr>
+<tr>
+<td><code>traj</code></td>
+<td><code>val</code></td>
+<td><code>in[3]</code></td>
+<td>sampled trajectory</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>out[0]</code></td>
+<td>same as input</td>
+</tr>
+<tr>
+<td><code>geo</code></td>
+<td><code>path</code></td>
+<td><code>out[1]</code></td>
+<td>geometry</td>
+</tr>
+<tr>
+<td><code>out</code></td>
+<td><code>val</code></td>
+<td><code>out[2]</code></td>
+<td>a string of convergence information</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fmaxtol</code></td>
+<td><code>2.0</code></td>
+<td>Max error on forces</td>
+</tr>
+<tr>
+<td><code>emaxtol</code></td>
+<td><code>0.02</code></td>
+<td>Max error on energy</td>
+</tr>
+<tr>
+<td><code>frmsetol</code></td>
+<td><code>0.15</code></td>
+<td>Tolerance for force RMSE</td>
+</tr>
+<tr>
+<td><code>ermsetol</code></td>
+<td><code>0.005</code></td>
+<td>Tolerance for energy RMSE</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>Source code</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">nextflow</span><span class="o">.</span><span class="na">enable</span><span class="o">.</span><span class="na">dsl</span><span class="o">=</span><span class="mi">2</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">params</span><span class="o">.</span><span class="na">publish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;.&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">def</span><span class="w"> </span><span class="nf">space_sep</span><span class="o">(</span><span class="k">in</span><span class="o">)</span><span class="w"> </span><span class="o">{(</span><span class="k">in</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Path</span><span class="o">)</span><span class="w"> </span><span class="o">?</span><span class="k">in</span><span class="w"> </span><span class="o">:</span><span class="k">in</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="s1">&#39; &#39;</span><span class="o">)}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">process</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">label</span><span class="w"> </span><span class="s1">&#39;tips&#39;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">publishDir</span><span class="w"> </span><span class="s2">&quot;$params.publish/$name&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nl">input:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="k">in</span><span class="o">,</span><span class="w"> </span><span class="nl">stageAs:</span><span class="s1">&#39;.in*/*&#39;</span><span class="o">),</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">flags</span><span class="o">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nl">output:</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s1">&#39;*&#39;</span><span class="o">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nl">script:</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="s2">    tips convert ${space_sep(in)} $flags</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="o">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">process</span><span class="w"> </span><span class="n">dsmix</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="n">label</span><span class="w"> </span><span class="s1">&#39;tips&#39;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="n">publishDir</span><span class="w"> </span><span class="s2">&quot;$params.publish/$name&quot;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="nl">input:</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">newDS</span><span class="o">,</span><span class="w"> </span><span class="nl">stageAs:</span><span class="s1">&#39;*.traj&#39;</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">oldDS</span><span class="o">,</span><span class="w"> </span><span class="nl">stageAs:</span><span class="s1">&#39;old/*&#39;</span><span class="o">),</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">newFlag</span><span class="o">),</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">oldFlag</span><span class="o">)</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="nl">output:</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s1">&#39;mix-ds.{tfr,yml}&#39;</span><span class="o">)</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="nl">script:</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">  </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="s2">  tips convert old/${oldDS[0].baseName}.yml -f pinn -o old-ds -of asetraj $oldFlag</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="s2">  tips convert ${space_sep(newDS)} -f asetraj -o tmp.traj -of asetraj</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="s2">  tips convert tmp.traj -f asetraj -o new-ds -of asetraj $newFlag</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="s2">  tips convert new-ds.traj old-ds.traj -f asetraj -o mix-ds -of pinn --shuffle $params.filters</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="s2">  rm {new-ds,old-ds,tmp}.*</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="s2">  &quot;&quot;&quot;</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="o">}</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="n">process</span><span class="w"> </span><span class="n">merge</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">  </span><span class="n">label</span><span class="w"> </span><span class="s1">&#39;tips&#39;</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">  </span><span class="n">publishDir</span><span class="w"> </span><span class="s2">&quot;$params.publish/$name&quot;</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">  </span><span class="nl">input:</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">idx</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="k">in</span><span class="o">,</span><span class="w"> </span><span class="nl">stageAs:</span><span class="s1">&#39;.in*/*&#39;</span><span class="o">),</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">flags</span><span class="o">)</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">  </span><span class="nl">output:</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s1">&#39;merged.idx&#39;</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s1">&#39;merged.traj&#39;</span><span class="o">)</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">  </span><span class="nl">script:</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">  </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="s2">  printf &quot;${idx.join(&#39;\\n&#39;)}&quot; &gt; merged.idx</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="s2">  tips convert ${space_sep(in)} -o merged -of asetraj $flags</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="s2">  &quot;&quot;&quot;</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="o">}</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="n">process</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">  </span><span class="n">label</span><span class="w"> </span><span class="s1">&#39;tips&#39;</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">  </span><span class="n">publishDir</span><span class="w"> </span><span class="s2">&quot;$params.publish/$name&quot;</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">  </span><span class="nl">input:</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">  </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">idx</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">logs</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">traj</span><span class="o">)</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">  </span><span class="nl">output:</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">  </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">name</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s1">&#39;*.xyz&#39;</span><span class="o">),</span><span class="w"> </span><span class="n">stdout</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">  </span><span class="nl">script:</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">  </span><span class="n">fmaxtol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">fmaxtol</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">  </span><span class="n">emaxtol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">emaxtol</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">  </span><span class="n">frmsetol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">frmsetol</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">  </span><span class="n">ermsetol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">ermsetol</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">  </span><span class="n">sp_points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">sp_points</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">  </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="s2">  #!/usr/bin/env python</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="s2">  import numpy as np</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="s2">  from ase import Atoms</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="s2">  from ase.io import read, write</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="s2">  from tips.io import load_ds</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="s2">  from tips.io.filter import filters2fn</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="s2">  filters = &quot;$params.filters&quot;.replace(&quot;&#39;&quot;, &#39;&#39;).split(&#39; &#39;)[1::2]</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="s2">  filter_fn = filters2fn(filters) # ^ a crude extractor</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="s2">  idx = [int(i) for i in np.loadtxt(&quot;$idx&quot;)]</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="s2">  logs = load_ds(&quot;$logs&quot;, fmt=&#39;asetraj&#39;)</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="s2">  traj = load_ds(&quot;$traj&quot;, fmt=&#39;asetraj&#39;)</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="s2">  idx, logs = tuple(zip(*(</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a><span class="s2">      (i, datum) for (i, datum) in zip(idx, logs) if filter_fn(datum))))</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a><span class="s2">  e_label = np.array([datum[&#39;energy&#39;]/len(datum[&#39;elem&#39;]) for datum in logs])</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a><span class="s2">  f_label = np.array([datum[&#39;force&#39;] for datum in logs])</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a><span class="s2">  e_pred = np.array([traj[i][&#39;energy&#39;]/len(traj[i][&#39;elem&#39;]) for i in idx])</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a><span class="s2">  f_pred = np.array([traj[i][&#39;force&#39;] for i in idx])</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a><span class="s2">  ecnt = np.sum(np.abs(e_pred-e_label)&gt;$emaxtol)</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a><span class="s2">  fcnt = np.sum(np.any(np.abs(f_pred-f_label)&gt;$fmaxtol,axis=(1,2)))</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a><span class="s2">  emax = np.max(np.abs(e_pred-e_label))</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="s2">  fmax = np.max(np.abs(f_pred-f_label))</span>
+<a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a><span class="s2">  ermse = np.sqrt(np.mean((e_pred-e_label)**2))</span>
+<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a><span class="s2">  frmse = np.sqrt(np.mean((f_pred-f_label)**2))</span>
+<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a><span class="s2">  converged = (emax&lt;$emaxtol) and (fmax&lt;$fmaxtol) and (ermse&lt;$ermsetol) and (frmse&lt;$frmsetol) and (len(idx)==$sp_points)</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>
+<a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a><span class="s2">  geoname = &quot;$name&quot;.split(&#39;/&#39;)[1]</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a><span class="s2">  if converged:</span>
+<a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a><span class="s2">      msg = f&#39;Converged; will restart from latest frame.&#39;</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a><span class="s2">      new_geo = logs[np.argmax(idx)]</span>
+<a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a><span class="s2">  else:</span>
+<a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a><span class="s2">      msg = f&#39;energy: {ecnt}/{len(idx)} failed, max={emax:.2f} rmse={ermse:.2f}; &#39;\</span>
+<a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a><span class="s2">            f&#39;force: {fcnt}/{len(idx)} failed, max={fmax:.2f} rmse={frmse:.2f}.&#39;</span>
+<a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a><span class="s2">      new_geo = logs[np.argmin(idx)]</span>
+<a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a><span class="s2">  atoms = Atoms(new_geo[&#39;elem&#39;], positions=new_geo[&#39;coord&#39;], cell=new_geo[&#39;cell&#39;],</span>
+<a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a><span class="s2">                pbc=True)</span>
+<a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a><span class="s2">  write(f&#39;{geoname}.xyz&#39;, atoms)</span>
+<a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a><span class="s2">  print(msg)</span>
+<a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a><span class="s2">  &quot;&quot;&quot;</span>
+<a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a><span class="o">}</span>
+</code></pre></div>
+</details>
+    </div>
+
+  </div>
+
+  <div class="page">
+    <div class="page-prev">
+      
+      <a href="../../recipe/acle/" title="AcLe"><span>«</span> Previous</a>
+      
+    </div>
+    <div class="page-next">
+      
+      <a href="../pinn/" title="PiNN" />Next <span>»</span></a>
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    Built with <a href="https://www.mkdocs.org">mkdocs</a> and the <a href="https://github.com/yqshao/mkdocs-flux-theme">flux</a> theme.
+  </div>
+</body>
+</html>

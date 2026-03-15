@@ -1,0 +1,364 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>ASE - PiNNAcLe</title>
+
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/notebook.css">
+  <link rel="stylesheet" href="../../css/pygments.css">
+  <link rel="icon" href="data:,">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+  <script>
+    var base_url = "../..";
+    $(document).ready(function(){
+          $('table').wrap('<div class="table-wrapper"></div>');
+    });
+  </script>
+
+  <script src="../../js/mike.js"></script>
+
+  
+    <script src="../../js/mathjax.js"></script>
+  
+    <script src="../../search/main.js"></script>
+  
+
+</head>
+
+<body>
+  <header class="header">
+    <ul>
+      <li id="logo">
+        <a href="../..">PiNN<span>AcLe</span></a>
+      </li>
+      
+      
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../tutorial/get_started/">
+      Tutorial
+    </a>
+  </li>
+
+      
+      
+  
+  <li class="active tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+      
+      
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+      
+      <li class="tools">
+        
+          <a id="nav-toggle" class="tool" onclick="nav_toggle()">
+        
+          <svg><use xlink:href="../../svg/sprite.svg#menu-2"></use></svg>
+        </a>
+        <script>
+           function nav_toggle() {
+               var bar = document.getElementById("tab-bar");
+               if (bar.style.display === "none") {
+                   bar.style.display = "block";
+               } else {
+                   bar.style.display = "none";
+               }
+           }
+          function nav_reset() {
+              var bar = document.getElementById("tab-bar");
+              if (window.innerWidth>950){
+                  bar.style.display = "block";
+              } else {
+                  bar.style.display = "none";
+              }
+          }
+          window.onresize = nav_reset;
+        </script>
+        
+        
+        <a class="tool" href="https://github.com/teoroo-cmc/pinnacle/">
+          <svg><use xlink:href="../../svg/sprite.svg#brand-github"></use></svg>
+          <span>teoroo-cmc/pinnacle</span>
+        </a>
+        
+      </li>
+    </ul>
+  </header>
+
+
+  <div id="main">
+    <div id="tab-bar">
+      <ul>
+      
+       
+  <li  class="tab" >
+    <a href="../.." class="">
+      Home
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../tutorial/get_started/">
+      Tutorial
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li class="active tab" >
+    <a href="../../manual/">
+      Manual
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+                 
+                   
+    <li >
+      <a href="../../manual/" class="">
+        Overview
+      </a>
+    </li>
+
+                 
+                   
+  <a class="nav-title" > Recipes </a>
+  
+    
+    <li >
+      <a href="../../recipe/acle/" class="">
+        AcLe
+      </a>
+    </li>
+
+  
+
+                 
+                   
+  <a class="nav-title" > Modules </a>
+  
+    
+    <li >
+      <a href="../tips/" class="">
+        TIPS
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../pinn/" class="">
+        PiNN
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../cp2k/" class="">
+        CP2K
+      </a>
+    </li>
+
+  
+    
+    <li class="active">
+      <a href="./" class="">
+        ASE
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../dftb/" class="">
+        DFTB+
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../molutils/" class="">
+        molutils
+      </a>
+    </li>
+
+  
+    
+    <li >
+      <a href="../lammps/" class="">
+        LAMMPS
+      </a>
+    </li>
+
+  
+
+                 
+               
+             </ul>
+           </div>
+         
+      
+       
+  
+  <li  class="tab" >
+    <a href="../../profiles/overview/">
+      Profiles
+    </a>
+  </li>
+
+         
+           <div class="nav-bar">
+             <ul>
+               
+             </ul>
+           </div>
+         
+      
+      </ul>
+    </div>
+
+    <div id="content">
+      <h1 id="ase-module">ASE Module</h1>
+<p>The <code>ase.nf</code> module supplies two boilerplate processes <code>aseSP</code> and <code>aseMD</code> that
+be used to construct processes based on ASE. A typical usage of the module is to
+supply a python script that defines the an ASE calculator object as the input,
+and make the SP and MD computation with ASE. Those usage can be easily achieved
+by the provided <code>sp</code> and <code>md</code> workflow. The <a href="../dftb">DFTB+ module</a> is an example of such
+usage.</p>
+<h2 id="asesp">aseSP</h2>
+<p>The aseSP process perform</p>
+<h3 id="channel-specification">Channel specification</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>i/o</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>in[0]</code></td>
+<td>an id to identify the process</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td><code>path</code></td>
+<td><code>in[1]</code></td>
+<td>a python module with a <code>calc</code> object defined</td>
+</tr>
+<tr>
+<td><code>geo</code></td>
+<td><code>path</code></td>
+<td><code>in[2]</code></td>
+<td>a geometry file readable by <code>ase.io.read</code></td>
+</tr>
+<tr>
+<td><code>aux</code></td>
+<td><code>path</code></td>
+<td><code>in[3]</code></td>
+<td>auxiliary file to be supplied</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>val</code></td>
+<td><code>out[0]</code></td>
+<td>same as input</td>
+</tr>
+<tr>
+<td><code>sp</code></td>
+<td><code>path</code></td>
+<td><code>out[1]</code></td>
+<td>single point label in xyz format [<code>sp.xyz</code>]</td>
+</tr>
+</tbody>
+</table>
+    </div>
+
+  </div>
+
+  <div class="page">
+    <div class="page-prev">
+      
+      <a href="../cp2k/" title="CP2K"><span>«</span> Previous</a>
+      
+    </div>
+    <div class="page-next">
+      
+      <a href="../dftb/" title="DFTB+" />Next <span>»</span></a>
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    Built with <a href="https://www.mkdocs.org">mkdocs</a> and the <a href="https://github.com/yqshao/mkdocs-flux-theme">flux</a> theme.
+  </div>
+</body>
+</html>
